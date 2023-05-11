@@ -1,7 +1,7 @@
 Feature: Verify DashBoard Items
 
   Background:
-  Given User should log in with username "sa" and password "Good2go@2019" to the admin panel
+  Given User should log in with username "kavyajakkula" and password "VLJakkkav$9" to the admin panel
 
   Scenario Outline: Verify all details of dashboard
     Then User is able to see tag "<client>" and number of total client "<tclient>" and monthly client "<mclient>"
@@ -10,7 +10,7 @@ Feature: Verify DashBoard Items
     Then User is able to see tag "<claim>" and number of total claim "<tclaim>" and monthly claim "<mclaim>"
     Examples:
       |client|tclient|mclient|quote|tquote|mquote|policy|tpolicy|mpolicy|claim|tclaim|mclaim|
-      |Client|44629|531|Quote|95366|1077|Policy|43702|462|Claim|528|25|
+      |Client|41365|404|Quote|48794|496|Policy|5528|69|Claim|968|17|
 
 
 

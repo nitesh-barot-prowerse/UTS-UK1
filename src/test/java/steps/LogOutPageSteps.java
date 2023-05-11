@@ -17,7 +17,7 @@ public class LogOutPageSteps {
     @Then("User will redirect to login page")
     public void user_will_redirect_to_login_page() {
         String message=logOutPage.verifyLogInPage();
-        Assert.assertEquals(message,"Login to your account");
+        Assert.assertEquals(message,"Login to your Account");
 
     }
 }

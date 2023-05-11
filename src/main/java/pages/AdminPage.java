@@ -23,9 +23,9 @@ public class AdminPage {
 
     private By adminIcon = By.cssSelector("ul[id='side-menu']>li:nth-child(10)");
 
-    private By letterIcon = By.xpath("//div[@class='ibox-content']/div/div[5]/a/i");
+    private By letterIcon = By.xpath("//div[@class='ibox-content']/div/div[4]/a/i");
 
-    private By editLetterTemplateButton = By.xpath("//div[@id='gridName']/table/tbody/tr/td[5]/div/a[1]");
+    private By editLetterTemplateButton = By.xpath("//div[@id='gridName']/table/tbody/tr[1]/td[6]/div/a[1]");
 
     private By displayMessage = By.xpath("//*[text()='Edit Letter Template']");
 
@@ -85,7 +85,7 @@ public class AdminPage {
 
     private By bicNUmberInput = By.xpath("//div[@class='ibox float-e-margins']/div[2]/div[5]/div/div/div/input");
 
-    private By insurerIcon = By.xpath("//div[@class='ibox-content']/div/div[6]/a/i");
+    private By insurerIcon = By.xpath("//div[@class='ibox-content']/div/div[5]/a/i");
 
     private By displayedMessageOnManageInsurerPage = By.xpath("//div[@class='row wrapper border-bottom white-bg page-heading']/div/h2");
 
@@ -111,13 +111,13 @@ public class AdminPage {
 
     private By displayedMessageOnAddInsurerPage = By.xpath("//div[@class='row wrapper border-bottom white-bg page-heading']/div/h2");
 
-    private By agentIcon = By.xpath("//div[@class='ibox-content']/div/div[7]/a/i");
+    private By agentIcon = By.xpath("//div[@class='ibox-content']/div/div[6]/a/i");
 
     private By agentReferenceNumber = By.xpath("//div[@id='gridName']/table/tbody/tr/td[2]");
 
     private By displayedMessageOnViewAgentPage = By.xpath("//div[@class='row wrapper border-bottom white-bg page-heading']/div[1]/h2");
 
-    private By companyIcon = By.xpath("//div[@class='ibox-content']/div/div[8]/a/i");
+    private By companyIcon = By.xpath("//div[@class='ibox-content']/div/div[7]/a/i");
 
 
     public void clickAdminIcon() {

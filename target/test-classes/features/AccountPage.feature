@@ -1,7 +1,7 @@
 Feature: Verify account page hyperlinks
 
   Background:
-    Given User should log in with username "sa" and password "Good2go@2019" to the admin panel
+    Given User should log in with username "kavyajakkula" and password "VLJakkkav$9" to the admin panel
     When User clicks on account icon on left tool bar
 
   Scenario: All hyperlinks with icons on account page should work

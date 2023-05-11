@@ -2,7 +2,7 @@ Feature: Verify Data And Functionality Of Manage Quote Page
 
 
   Background:
-    Given User should log in with username "sa" and password "Good2go@2019" to the admin panel
+    Given User should log in with username "kavyajakkula" and password "VLJakkkav$9" to the admin panel
     When User clicks on quote icon on left tool bar
 
 #  Scenario: User will redirect to manage quote page after clicking on quote icon on left tool bar
@@ -21,7 +21,7 @@ Feature: Verify Data And Functionality Of Manage Quote Page
 #  Scenario:To check whether user will able able to redirect and see data on microchip file upload  page after clicking on upload microchip button on manage quote page
 #    When User clicks on upload microchip file button
 #    Then User will be able to see microchip file upload page with data
-#
+
 #  Scenario:On the Add Quote page, verify that the Product dropdown lists Dog, Cat, Exotic, and Introductory Cover
 #    When User clicks on add quote button
 #    Then On add quote page product dropdown will appear with desired list

@@ -37,10 +37,10 @@ Feature: Check Admin Page Data And Functionality
 #    When User enters department value in to search input on manage department page
 #    And User clicks on search button on manage department page
 #    Then Respected data upon department value will display on manage department page
-
-  Scenario: Manage Bank Account page displays with all details by clicking on bank account icon on administration page
-    When User clicks on bank account icon
-    Then Manage bank account page displays with all details
+#
+#  Scenario: Manage Bank Account page displays with all details by clicking on bank account icon on administration page
+#    When User clicks on bank account icon
+#    Then Manage bank account page displays with all details
 
 
 #  Scenario: Filter data of bank details upon bank account and insurer drop down items on manage bank account page

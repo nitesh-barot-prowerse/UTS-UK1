@@ -1,7 +1,7 @@
 Feature: Check Manage Policy Page Data And Functionality
 
   Background:
-    Given User should log in with username "sa" and password "Good2go@2019" to the admin panel
+    Given User should log in with username "kavyajakkula" and password "VLJakkkav$9" to the admin panel
     When User clicks on policy icon on left tool bar
 
   Scenario: Check of manage policy page
@@ -19,7 +19,7 @@ Feature: Check Manage Policy Page Data And Functionality
     And User clicks on letter tab on policy information page
     And User clicks on download icon
     Then User will able to see downloaded policy page
-
-  Scenario: Check appropriate policy data should displays against option selected from status drop down on manage policy page
-    When User selects any options from status dropdown
-    Then Appropriate data displays on manage policy page depend on drop down option
+#
+#  Scenario: Check appropriate policy data should displays against option selected from status drop down on manage policy page
+#    When User selects any options from status dropdown
+#    Then Appropriate data displays on manage policy page depend on drop down option

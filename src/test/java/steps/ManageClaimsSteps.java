@@ -58,8 +58,8 @@ public class ManageClaimsSteps {
         //System.out.println(yearlyArray);
 
         String[] split = amountPayable.split("[ .\\ ]+");
-        // System.out.println(split);
-        for (int j = 1; j <= split.length-1; j=j+3) {
+         System.out.println(split);
+        for (int j = 1; j <= split.length-1; j=j+2) {
             System.out.println(split[j]);
             if (split[j].contains("£")) {
                 System.out.println("Data Prefixed by £");

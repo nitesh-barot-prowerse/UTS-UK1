@@ -75,7 +75,7 @@ public class QuotePageSteps {
 
         String[] split = yearlyArray.split("[ .\\ ]+");
         // System.out.println(split);
-        for (int j = 1; j <= split.length-1; j=j+3) {
+        for (int j = 1; j <= split.length-1; j=j+2) {
             System.out.println(split[j]);
             if (split[j].contains("£")) {
                 System.out.println("Data Prefixed by £");
@@ -91,7 +91,7 @@ public class QuotePageSteps {
         //System.out.println(monthlyArray);
 
         String monthArray[] = monthlyArray.split("[ .,\\ ]+");
-        for (int j = 1; j <= monthArray.length-1; j=j+3) {
+        for (int j = 1; j <= monthArray.length-1; j=j+2) {
             System.out.println(monthArray[j]);
             if (monthArray[j].contains("£")) {
                 System.out.println("Data Prefixed by £");
@@ -125,7 +125,7 @@ public class QuotePageSteps {
     @Then("On add quote page product dropdown will appear with desired list")
     public void on_add_quote_page_product_dropdown_will_appear_with_desired_list() {
         String verifyS=quotePage.verifyProductList();
-        Assert.assertEquals(verifyS," Select Exotic Cat Dog Introductory Cover ");
+        Assert.assertEquals(verifyS," Select Exotic Horse Professional ");
 
     }
 
