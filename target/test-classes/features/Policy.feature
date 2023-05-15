@@ -1,5 +1,4 @@
-Feature: Check Manage Policy Page Data And Functionality
-
+Feature: Verify Policy Module Features
   Background:
     Given User should log in with username "kavyajakkula" and password "VLJakkkav$9" to the admin panel
     When User clicks on policy icon on left tool bar

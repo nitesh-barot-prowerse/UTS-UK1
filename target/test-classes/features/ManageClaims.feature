@@ -1,4 +1,4 @@
-Feature: Verify Available Data And Functionality On ManageClaims Page
+Feature: Verify Manage Claim Module Features
 
   Background:
     Given User should log in with username "kavyajakkula" and password "VLJakkkav$9" to the admin panel
@@ -14,11 +14,11 @@ Feature: Verify Available Data And Functionality On ManageClaims Page
   Scenario: User will redirect to respected claim information page by clicking on claim number link on manage claim page
     When User clicks on claim number on manage claim page
     Then User will redirects to respected claim information page
-#
-#  Scenario: Add claim page displays all dropdowns with valid items and date appears with calender icon
-#    When User clicks on add claim button
-#    Then User will redirect to add claim page
-#    And Page has all dropdown with valid list items'
+
+  Scenario: Add claim page displays all dropdowns with valid items and date appears with calender icon
+    When User clicks on add claim button
+    Then User will redirect to add claim page
+    And Page has all dropdown with valid list items'
 #
 #  Scenario: Treatment status should reflect upon items selected from treatment status drop down on manage claim page
 #    When User selects any options from treatment status dropdown on manage claim page

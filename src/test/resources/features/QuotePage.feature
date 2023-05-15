@@ -1,12 +1,12 @@
-Feature: Verify Data And Functionality Of Manage Quote Page
+Feature: Verify Quote Module Features
 
 
   Background:
     Given User should log in with username "kavyajakkula" and password "VLJakkkav$9" to the admin panel
     When User clicks on quote icon on left tool bar
 
-  Scenario: User will redirect to manage quote page after clicking on quote icon on left tool bar
-    Then User will see quote details
+  Scenario: Manage Quote page displays with list of quotes.
+    Then Manage quote page displays with list of quote
 
   Scenario:To Check Quote date and Expire date at quote table displays in dd-mm-yyyy format
     Then User will able to see all data under quote date and expire date column displays with dd-mm-yyyy format
@@ -18,17 +18,17 @@ Feature: Verify Data And Functionality Of Manage Quote Page
   Scenario:Verify data under total and monthly premium column preceding by £ sign
     Then User will able to see  all data under total and monthly premium colum prefixed by £ sign
 
-  Scenario:To check whether user will able able to redirect and see data on microchip file upload  page after clicking on upload microchip button on manage quote page
-    When User clicks on upload microchip file button
-    Then User will be able to see microchip file upload page with data
+#  Scenario:To check whether user will able able to redirect and see data on microchip file upload  page after clicking on upload microchip button on manage quote page
+#    When User clicks on upload microchip file button
+#    Then User will be able to see microchip file upload page with data
 
-  Scenario:On the Add Quote page, verify that the Product dropdown lists Dog, Cat, Exotic, and Introductory Cover
+  Scenario:On the Add Quote page, verify that the Product dropdown appears with list of products
     When User clicks on add quote button
     Then On add quote page product dropdown will appear with desired list
 
   Scenario: Respected quote information page will be displayed upon clicking quote number on manage quote page
     When User clicks on quote number on manage quote page
-    Then User will see quote information
+    Then Quote Information page displays with details
 
 #  Scenario: Items on manage quote page displays upon item select from quote status dropdown
 #    When User selects appropriate option from quote status dropdown

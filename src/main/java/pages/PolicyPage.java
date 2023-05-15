@@ -74,9 +74,10 @@ public class PolicyPage {
 
     }
 
-    public void clickOnPolicyNumberLink() {
+    public String clickOnPolicyNumberLink() {
         WebDriverWait cWait = new WebDriverWait(driver, 10);
         List<WebElement> totalColumn = cWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@id='gridName']/table/tbody[1]/tr/td[3]")));
+        String displayMessage=" ";
         for (WebElement cEle : totalColumn) {
             cEle.click();
             try {
@@ -86,9 +87,15 @@ public class PolicyPage {
             }
             ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
             driver.switchTo().window(tabs2.get(1));
+            System.out.println(driver.getCurrentUrl());
+            displayMessage=displayMessage+driver.findElement(displayedMessage).getText();
+
+            driver.close();
+            driver.switchTo().window(tabs2.get(0));
             break;
 
         }
+        return displayMessage;
 
     }
 

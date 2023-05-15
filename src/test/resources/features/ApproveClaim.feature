@@ -1,4 +1,4 @@
-Feature: Verify Available Data And Functionality On Approve Page
+Feature:  Verify Approve Claim  Module Features
 
   Background:
     Given User should log in with username "kavyajakkula" and password "VLJakkkav$9" to the admin panel

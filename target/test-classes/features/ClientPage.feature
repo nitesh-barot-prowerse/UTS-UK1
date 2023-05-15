@@ -1,4 +1,4 @@
-Feature: Verify Data Of Manage Client Page
+Feature: Verify Client Module Features
 
 
   Background:
@@ -6,7 +6,7 @@ Feature: Verify Data Of Manage Client Page
     When User clicks on client icon on left tool bar
 
   Scenario: User will redirect to manage client page after clicking on client icon on left tool bar
-    Then User will see client details
+    Then Manage client page displays with list of clients
 
 #  Scenario: Appropriate client data will display upon entering  code in search box
 #    When User enters code number inside search box on manage client page
