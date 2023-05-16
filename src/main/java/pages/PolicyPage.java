@@ -90,8 +90,8 @@ public class PolicyPage {
             System.out.println(driver.getCurrentUrl());
             displayMessage=displayMessage+driver.findElement(displayedMessage).getText();
 
-            driver.close();
-            driver.switchTo().window(tabs2.get(0));
+            //driver.close();
+            //driver.switchTo().window(tabs2.get(0));
             break;
 
         }
