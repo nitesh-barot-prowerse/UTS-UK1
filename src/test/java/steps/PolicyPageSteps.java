@@ -60,13 +60,7 @@ public class PolicyPageSteps {
 
     @When("User clicks on policy number")
     public void user_clicks_on_policy_number() {
-        policyPage.clickOnPolicyNumberLink();
-
-    }
-
-    @Then("User will redirect to policy information page")
-    public void user_will_redirect_to_policy_information_page() {
-        String policyMessage = policyPage.verifyPolicyInformationPage();
+        String policyMessage = policyPage.clickOnPolicyNumberLink();
         if (policyMessage.length()>0){
             System.out.println(policyMessage);
         }
@@ -77,9 +71,14 @@ public class PolicyPageSteps {
 
     }
 
+    @Then("User will redirect to policy information page")
+    public void user_will_redirect_to_policy_information_page() {
+
+    }
+
     @When("User clicks on policy number link")
     public void user_clicks_on_policy_number_link() {
-        policyPage.clickOnPolicyNumberLink();
+        policyPage.clickPolicyPageToDownloadFile();
     }
 
     @When("User clicks on letter tab on policy information page")

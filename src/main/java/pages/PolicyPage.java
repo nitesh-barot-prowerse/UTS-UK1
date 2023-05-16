@@ -76,7 +76,7 @@ public class PolicyPage {
 
     public String clickOnPolicyNumberLink() {
         WebDriverWait cWait = new WebDriverWait(driver, 10);
-        List<WebElement> totalColumn = cWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@id='gridName']/table/tbody[1]/tr/td[3]")));
+        List<WebElement> totalColumn = cWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@id='gridName']/table/tbody[1]/tr/td[3]/a")));
         String displayMessage=" ";
         for (WebElement cEle : totalColumn) {
             cEle.click();
@@ -90,9 +90,9 @@ public class PolicyPage {
             System.out.println(driver.getCurrentUrl());
             displayMessage=displayMessage+driver.findElement(displayedMessage).getText();
 
-            //driver.close();
-            //driver.switchTo().window(tabs2.get(0));
-            break;
+            driver.close();
+            driver.switchTo().window(tabs2.get(0));
+           // break;
 
         }
         return displayMessage;
@@ -101,6 +101,26 @@ public class PolicyPage {
 
     public String verifyPolicyInformationPage() {
         return driver.findElement(displayedMessageOnPolicyInformation).getText();
+
+    }
+    public void clickPolicyPageToDownloadFile()
+    {
+        WebDriverWait cWait = new WebDriverWait(driver, 10);
+        List<WebElement> totalColumn = cWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@id='gridName']/table/tbody[1]/tr/td[3]/a")));
+
+        for (WebElement cEle : totalColumn) {
+            cEle.click();
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+            driver.switchTo().window(tabs2.get(1));
+            System.out.println(driver.getCurrentUrl());
+            break;
+
+        }
 
     }
 

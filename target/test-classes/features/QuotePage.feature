@@ -18,9 +18,9 @@ Feature: Verify Quote Module Features
   Scenario:Verify data under total and monthly premium column preceding by £ sign
     Then User will able to see  all data under total and monthly premium colum prefixed by £ sign
 
-#  Scenario:To check whether user will able able to redirect and see data on microchip file upload  page after clicking on upload microchip button on manage quote page
-#    When User clicks on upload microchip file button
-#    Then User will be able to see microchip file upload page with data
+  Scenario:To check whether user will able able to redirect and see data on microchip file upload  page after clicking on upload microchip button on manage quote page
+    When User clicks on upload microchip file button
+    Then User will be able to see microchip file upload page with data
 
   Scenario:On the Add Quote page, verify that the Product dropdown appears with list of products
     When User clicks on add quote button

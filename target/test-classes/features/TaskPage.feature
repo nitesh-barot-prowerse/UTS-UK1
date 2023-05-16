@@ -30,7 +30,7 @@ Feature: Verify Task Module Features
 #    When User Selects any option from client dropdown on manage task page
 #    Then Data under client column of task data displays accordingly
 
-  Scenario:To check task details should open after clicking on task title on manage task page
-    When User clicks on task tile on task manage page
-    Then Task details window will open with all task details
+#  Scenario:To check task details should open after clicking on task title on manage task page
+#    When User clicks on task tile on task manage page
+#    Then Task details window will open with all task details
 
