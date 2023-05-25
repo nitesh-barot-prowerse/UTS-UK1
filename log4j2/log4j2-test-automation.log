@@ -1,10 +1,5 @@
-[INFO ] 2023-05-16 12:42:57.083 [main] Log - User Opens US-UK-2 Website
-[INFO ] 2023-05-16 12:43:26.665 [main] Log - User Opens US-UK-2 Website
-[INFO ] 2023-05-16 12:43:27.688 [main] Log - User Enters Username And Password
-[INFO ] 2023-05-16 12:43:35.484 [main] Log - User Redirects To DashBord And Verify Through Message DashBoard On Page
-[INFO ] 2023-05-16 12:43:38.512 [main] Log - User verify (en-GB) text on right top corner of dash board page 
-[INFO ] 2023-05-16 15:06:16.979 [main] Log - User Opens US-UK-2 Website
-[INFO ] 2023-05-16 15:06:42.928 [main] Log - User Opens US-UK-2 Website
-[INFO ] 2023-05-16 15:06:43.957 [main] Log - User Enters Username And Password
-[INFO ] 2023-05-16 15:06:49.007 [main] Log - User Redirects To DashBord And Verify Through Message DashBoard On Page
-[INFO ] 2023-05-16 15:06:52.077 [main] Log - User verify (en-GB) text on right top corner of dash board page 
+[INFO ] 2023-05-25 15:36:10.773 [main] Log - User Opens US-UK-2 Website
+[INFO ] 2023-05-25 15:36:34.906 [main] Log - User Opens US-UK-2 Website
+[INFO ] 2023-05-25 15:36:35.922 [main] Log - User Enters Username And Password
+[INFO ] 2023-05-25 15:36:46.559 [main] Log - User Redirects To DashBord And Verify Through Message DashBoard On Page
+[INFO ] 2023-05-25 15:36:49.588 [main] Log - User verify (en-GB) text on right top corner of dash board page 
