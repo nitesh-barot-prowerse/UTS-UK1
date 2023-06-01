@@ -3,7 +3,7 @@ Feature: Verify Account Module Functionalities
   Background:
     Given User should log in with username "kavyajakkula" and password "VLJakkkav$9" to the admin panel
     When User clicks on account icon on left tool bar
-
+  @Sanity
   Scenario: All hyperlinks with icons on account page should work
     When User clicks on icon
     Then User will redirect to respected page
