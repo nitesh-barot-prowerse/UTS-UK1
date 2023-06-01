@@ -39,6 +39,7 @@ public class ClientPageSteps {
         }
 
     }
+    //Filter Client on base of client code in search box
 
     @When("User enters code number inside search box on manage client page")
     public void user_enters_code_number_inside_search_box_on_manage_client_page() {
@@ -55,6 +56,8 @@ public class ClientPageSteps {
         String clientCode = clientPage.verifyClient();
         Assert.assertEquals(clientCode, "RAOA-0001");
     }
+
+    //Filter Client on base of active dropdown options
 
     @When("User selects appropriate option from Active dropdown on manage client page")
     public void user_selects_appropriate_option_from_active_dropdown_on_manage_client_page() {
@@ -137,6 +140,74 @@ public class ClientPageSteps {
             System.out.println(contactDetail);
 
         }
+    }
+
+    //Add notes information of client
+    @When("User selects Add notes options from setting dropdown besides the active text on view client page")
+    public void user_selects_add_notes_options_from_setting_dropdown_besides_the_active_text_on_view_client_page() {
+        clientPage.selectAddNotesOfClient();
+    }
+
+    @When("User enters all details inside add notes window")
+    public void user_enters_all_details_inside_add_notes_window() {
+        clientPage.enterNotesDetails();
+    }
+
+    @Then("Notes details can view under note menu tab on view client page")
+    public void notes_details_can_view_under_note_menu_tab_on_view_client_page() {
+        String notesDetail = clientPage.verifyGeneratedNotesDetails();
+        if (notesDetail.length() > 0) {
+            System.out.println(notesDetail);
+
+        }
+    }
+
+    //Add task details for client
+
+    @When("User selects Add task options from setting dropdown besides the active text on view client page")
+    public void user_selects_add_task_options_from_setting_dropdown_besides_the_active_text_on_view_client_page() {
+        clientPage.selectAddTaskOfClient();
+
+    }
+
+    @When("User enters all details inside add task window")
+    public void user_enters_all_details_inside_add_task_window() {
+        clientPage.enterTaskDetails();
+
+    }
+
+    @Then("Task details can view under task menu tab on view client page")
+    public void task_details_can_view_under_task_menu_tab_on_view_client_page() {
+        String taskDetail = clientPage.verifyGeneratedTaskDetails();
+        if (taskDetail.length() > 0) {
+            System.out.println(taskDetail);
+
+        }
+
+    }
+
+    //Edit client details test case
+
+    @When("User selects edit client sections from setting dropdown besides the active text on view client page")
+    public void user_selects_edit_client_sections_from_setting_dropdown_besides_the_active_text_on_view_client_page() {
+        clientPage.selectEditClientDetails();
+
+    }
+
+    @When("User enters all details of client on edit client window")
+    public void user_enters_all_details_of_client_on_edit_client_window() {
+        clientPage.editClientData();
+
+    }
+
+    @Then("Updated details can view on view client page")
+    public void updated_details_can_view_on_view_client_page() {
+        String updatedClientDetail = clientPage.verifyUpdatedClient();
+        if (updatedClientDetail.length() > 0) {
+            System.out.println(updatedClientDetail);
+
+        }
+
     }
 
 

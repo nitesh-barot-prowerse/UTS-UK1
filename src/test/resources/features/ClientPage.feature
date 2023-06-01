@@ -9,6 +9,7 @@ Feature: Verify Client Module Features
   @Sanity
   Scenario:Ensure that the Manage Client page displays list of client data after clicking on client icon on left tool bar
     Then Manage client page displays with list of clients
+
   @Stage
   Scenario: To add and verify new client details inside client client module
     When User clicks on add client icon on manage client page
@@ -37,6 +38,7 @@ Feature: Verify Client Module Features
     And User selects Add contact option from setting dropdown besides of active text on view client page
     And User enters all details inside add client window
     Then Contact details can view under contacts menu on view client page
+
   @Stage
   Scenario: Verify add notes feature of client
     When User clicks on client code on manage client page
@@ -50,6 +52,7 @@ Feature: Verify Client Module Features
     And User selects Add task options from setting dropdown besides the active text on view client page
     And User enters all details inside add task window
     Then Task details can view under task menu tab on view client page
+
   @Stage
   Scenario: To verify edit client functionality for existing client
     When User clicks on client code on manage client page
