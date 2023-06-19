@@ -22,10 +22,10 @@ Feature: Verify Quote Module Features
   Scenario:Data under total and monthly premium column should prefixed by £ sign
     Then User will able to see  all data under total and monthly premium colum prefixed by £ sign
 
-  @Sanity
-  Scenario:To check whether user will able able to redirect and see data on microchip file upload  page after clicking on upload microchip button on manage quote page
-    When User clicks on upload microchip file button
-    Then User will be able to see microchip file upload page with data
+#  @Sanity(Do not use this one for UK1)
+#  Scenario:To check whether user will able able to redirect and see data on microchip file upload  page after clicking on upload microchip button on manage quote page
+#    When User clicks on upload microchip file button
+#    Then User will be able to see microchip file upload page with data
 
   @Sanity
   Scenario:On the Add Quote page, verify that the Product dropdown appears with list of products
@@ -37,10 +37,35 @@ Feature: Verify Quote Module Features
     When User clicks on quote number on manage quote page
     Then Quote Information page displays with details
 
+#  @Sanity (Do not use this one for uk1)
 #  Scenario: Items on manage quote page displays upon item select from quote status dropdown
 #    When User selects appropriate option from quote status dropdown
 #    Then Respected data will be displayed on Manage quote page
 
+  @Sanity
+  Scenario: Fetch list of quote based on product option from product dropdown on manage quote page
+    When User selects appropriate option from product dropdown on manage quote page
+    And User clicks on search button on manage quote page
+    Then Appropriate list of quote will display
+
+#  @Stage
+#  Scenario:Fetch quotation based on quote number on manage quote page
+#    When User enters quote number inside search box on manage quote page
+#    And User clicks on search button on manage quote page
+#    Then Appropriate quote information displays on manage quote page
+
+  @Sanity
+  Scenario:Verify include payment feature of quote module
+    When User selects include payment only quotes checkbox
+    And User clicks on search button on manage quote page
+    Then Appropriate quote list displays on manage quote page
+
+#  @Stage
+#  Scenario: Edit quote details and verifies the same
+#    When User enters quote number inside search box on manage quote page
+#    And User clicks on search button on manage quote page
+#    And User selects edit quote option from cog icon on quote information page
+#    Then User can edit all required field on edit quote page
 
 
 

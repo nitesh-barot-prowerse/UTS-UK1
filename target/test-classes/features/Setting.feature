@@ -3,6 +3,7 @@ Feature: Verify Setting Module Features
   Background:
     Given User should log in with username "kavyajakkula" and password "VLJakkkav$9" to the admin panel
     When User clicks on look up values icon on left tool bar
+
   @Sanity
   Scenario: All hyperlinks with icons on setting page should work
     When User clicks on icon on setting page

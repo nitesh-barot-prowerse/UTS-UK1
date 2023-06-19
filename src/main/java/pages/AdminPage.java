@@ -126,6 +126,11 @@ public class AdminPage {
 
     public void clickOnLetterIcon() {
         driver.findElement(letterIcon).click();
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 
@@ -199,6 +204,11 @@ public class AdminPage {
 
         } else {
             driver.findElement(By.xpath("//div[@class='ibox-content']/div/div[1]/a")).click();
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
             System.out.println(driver.getCurrentUrl());
             driver.findElement(adminIcon).click();
 
@@ -209,6 +219,11 @@ public class AdminPage {
 
         } else {
             driver.findElement(By.xpath("//div[@class='ibox-content']/div/div[2]/a")).click();
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
             System.out.println(driver.getCurrentUrl());
             driver.findElement(adminIcon).click();
         }
@@ -218,6 +233,11 @@ public class AdminPage {
 
         } else {
             driver.findElement(By.xpath("//div[@class='ibox-content']/div/div[3]/a")).click();
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
             System.out.println(driver.getCurrentUrl());
             driver.findElement(adminIcon).click();
         }
@@ -227,6 +247,11 @@ public class AdminPage {
 
         } else {
             driver.findElement(By.xpath("//div[@class='ibox-content']/div/div[4]/a")).click();
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
             System.out.println(driver.getCurrentUrl());
             driver.findElement(adminIcon).click();
         }
@@ -236,6 +261,11 @@ public class AdminPage {
 
         } else {
             driver.findElement(By.xpath("//div[@class='ibox-content']/div/div[5]/a")).click();
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
             System.out.println(driver.getCurrentUrl());
             driver.findElement(adminIcon).click();
         }
@@ -245,6 +275,11 @@ public class AdminPage {
 
         } else {
             driver.findElement(By.xpath("//div[@class='ibox-content']/div/div[6]/a")).click();
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
             System.out.println(driver.getCurrentUrl());
             driver.findElement(adminIcon).click();
         }
@@ -254,6 +289,11 @@ public class AdminPage {
 
         } else {
             driver.findElement(By.xpath("//div[@class='ibox-content']/div/div[7]/a")).click();
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
             System.out.println(driver.getCurrentUrl());
             driver.findElement(adminIcon).click();
         }
@@ -263,6 +303,11 @@ public class AdminPage {
 
         } else {
             driver.findElement(By.xpath("//div[@class='ibox-content']/div/div[8]/a")).click();
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
             System.out.println(driver.getCurrentUrl());
             driver.findElement(adminIcon).click();
         }
@@ -273,6 +318,11 @@ public class AdminPage {
 
         } else {
             driver.findElement(By.xpath("//div[@class='ibox-content']/div/div[9]/a")).click();
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
             System.out.println(driver.getCurrentUrl());
             driver.findElement(adminIcon).click();
         }
@@ -283,6 +333,11 @@ public class AdminPage {
 
         } else {
             driver.findElement(By.xpath("//div[@class='ibox-content']/div/div[10]/a")).click();
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
             System.out.println(driver.getCurrentUrl());
             driver.findElement(adminIcon).click();
         }

@@ -32,10 +32,17 @@ public class PolicyPage {
 
     private By statusDropDown = By.xpath("//div[@class='ms-parent']");
 
-    private By policyDropDownOption = By.xpath("//div[@class='ms-drop']/ul/li[2]");
+    private By policyDropDownOption = By.xpath("//div[@class='ms-drop']/ul/li[2]/label/input");
+
+    private By searchButton=By.cssSelector("button[id='SearchGrid']");
 
     public void clickPolicyIcon() {
         driver.findElement(policyIcon).click();
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public String verifyManagePolicyPage() {
@@ -183,20 +190,33 @@ public class PolicyPage {
     }
 
     public void selectOptionFromStatusDropDown() {
-        WebElement element = driver.findElement(statusDropDown);
-        Actions actions = new Actions(driver); actions.moveToElement(element).click().build().perform();
         try {
-            Thread.sleep(2000);
+            Thread.sleep(4000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        WebElement element = driver.findElement(statusDropDown);
+        Actions actions = new Actions(driver);
+        actions.moveToElement(element).click().build().perform();
+        try {
+            Thread.sleep(1500);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
         driver.findElement(policyDropDownOption).click();
+        driver.findElement(searchButton).click();
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
 
     }
 
     public String verifyPolicyStatusUponDropDown() {
         WebDriverWait wait = new WebDriverWait(driver, 10);
-        List<WebElement> policyStatus = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@id='gridName']/table/tbody[1]/tr/td[11]")));
+        List<WebElement> policyStatus = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@id='gridName']/table/tbody[1]/tr")));
         String Status = " ";
         for (WebElement status : policyStatus) {
             Status = status.getText();

@@ -87,7 +87,7 @@ public class ClientPage {
 
     private By contactMenu = By.xpath("//div[@class='project-tabs user-profile dsh-tab']/ul/li[3]");
 
-    private By contactData = By.xpath("//div[@id='gridName']/table/tbody/tr");
+    private By contactData = By.xpath("//div[@id='gridName']/table/tbody/tr[1]");
 
     //Add notes details of client
 
@@ -148,6 +148,19 @@ public class ClientPage {
     private By clientContact=By.cssSelector("input[id='PrimaryContactNumber']");
 
     private By saveButton=By.xpath("//button[@type='button' and @value='Create']");
+
+
+    //Add Primary contact for client on production
+
+    private By settingIconOnProd=By.xpath("//div[@id='gridName']/table/tbody/tr[1]/td[7]/ul/li/a");
+
+    private By primaryContactIconFromDD=By.xpath("//div[@id='gridName']/table/tbody/tr[1]/td[7]/ul/li/ul/li[5]/a");
+
+    private By addNotesFromDDForProd= By.xpath("//div[@id='gridName']/table/tbody/tr[1]/td[7]/ul/li/ul/li[6]/a");
+
+    private By addTaskFromDDForProd=By.xpath("//div[@id='gridName']/table/tbody/tr[1]/td[7]/ul/li/ul/li[7]/a");
+
+    private By editClientFromDDForProd=By.xpath("//div[@id='gridName']/table/tbody/tr[1]/td[7]/ul/li/ul/li[1]/a");
 
 
     public String verifyClientManage() {
@@ -213,20 +226,37 @@ public class ClientPage {
 
             break;
         }
-    }
-
-    public String verifyClientStatus() {
         try {
-            Thread.sleep(2000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public String verifyClientStatus() {
+
 
         ((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute('style','overflow: inline;');", driver.findElement(By.xpath("//button[@class='btn btn-info btn-sm']")));
         String Status = driver.findElement(By.xpath("//div[@class='tooltip-demo pull-right']/div/button")).getText();
 
         return Status;
     }
+//To check whether add quote page is displays for same user by clicking on add button on view client page
+    public String clickClientCodeToGetClientNumber() {
+
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebElement clientInfo = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@id='gridName']/table/tbody/tr[1]/td[2]")));
+        String clientNumber =clientInfo.getText();
+        System.out.println(clientNumber);
+        clientInfo.click();
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        return clientNumber;
+    }
+
 
     public void clickOnAddQuoteButton() {
         driver.findElement(addQuoteForClient).click();
@@ -365,11 +395,16 @@ public class ClientPage {
 
     public String verifyGeneratedContactDetails() {
         try {
-            Thread.sleep(2000);
+            Thread.sleep(4000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
         driver.findElement(contactMenu).click();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         return driver.findElement(contactData).getText();
 
     }
@@ -579,6 +614,100 @@ public class ClientPage {
     public String verifyUpdatedClient(){
         return driver.findElement(By.cssSelector("ul[class='iconlist']>li")).getText();
     }
+
+    //Add client primary contact details on production
+
+    public void enterClientCode() {
+        driver.findElement(searchBox).sendKeys("TEST-0325");
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void clickOnSearchButton() {
+        driver.findElement(searchButton).click();
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void SelectPrimaryContactFromSetting(){
+
+        Actions actions = new Actions(driver);
+        actions.moveToElement(driver.findElement(By.xpath("//div[@id='gridName']/table/tbody/tr[1]/td[7]/ul/li/a"))).perform();
+        driver.findElement(primaryContactIconFromDD).click();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    public void clickONClientCode() {
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        List<WebElement> clientInfo = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@id='gridName']/table/tbody/tr[1]/td[2]")));
+        for (WebElement client : clientInfo) {
+            client.click();
+            break;
+
+        }
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    //Add client note feature for production
+
+    public void SelectAddNotesFromSetting(){
+
+        Actions actions = new Actions(driver);
+        actions.moveToElement(driver.findElement(By.xpath("//div[@id='gridName']/table/tbody/tr[1]/td[7]/ul/li/a"))).perform();
+        driver.findElement(addNotesFromDDForProd).click();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    //Add Task for client on Production
+
+    public void SelectAddTaskFromSetting(){
+
+        Actions actions = new Actions(driver);
+        actions.moveToElement(driver.findElement(By.xpath("//div[@id='gridName']/table/tbody/tr[1]/td[7]/ul/li/a"))).perform();
+        driver.findElement(addTaskFromDDForProd).click();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    //verify edit client feature on production
+
+    public void SelectEditClientFromSetting(){
+
+        Actions actions = new Actions(driver);
+        actions.moveToElement(driver.findElement(By.xpath("//div[@id='gridName']/table/tbody/tr[1]/td[7]/ul/li/a"))).perform();
+        driver.findElement(editClientFromDDForProd).click();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
 
 
 
