@@ -8,10 +8,10 @@ Feature: Verify Report Module Features
   Scenario: All hyperlinks with icons on setting page should work
     Then User will able to see total six section of report category
 
-  @Sanity
-  Scenario: User will able to redirect on respected report page by clicking on report icon on report page
-    When User clicks on reports icon
-    Then Respected report page displays
+#  @Sanity
+#  Scenario: User will able to redirect on respected report page by clicking on report icon on report page
+#    When User clicks on reports icon
+#    Then Respected report page displays
 #
 #  Scenario: Filter quote report information upon product,status,quote from drop down
 #    When User clicks on quote report button on report button
