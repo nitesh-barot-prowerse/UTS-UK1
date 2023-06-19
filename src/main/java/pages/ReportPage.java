@@ -68,7 +68,7 @@ public class ReportPage {
             driver.findElement(By.xpath("//div[@class='ibox']/div[1]/div[1]/div/div[2]/a[1]")).click();
         }
         try {
-            Thread.sleep(3000);
+            Thread.sleep(5000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
