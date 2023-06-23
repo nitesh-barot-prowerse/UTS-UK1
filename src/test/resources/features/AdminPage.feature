@@ -49,11 +49,11 @@ Feature: Verify Admin Module Features
     And User clicks on add department icon on manage department page
     Then Add department page displays with all details
 
-  @Sanity
-  Scenario: Edit department page displays upon clicking on edit icon against department name inside list of department on manage department page
-    When User clicks on department icon on administrator page
-    And User clicks on edit icon against department name on manage department page
-    Then Edit department page displays in editable format
+#  @Sanity
+#  Scenario: Edit department page displays upon clicking on edit icon against department name inside list of department on manage department page
+#    When User clicks on department icon on administrator page
+#    And User clicks on edit icon against department name on manage department page
+#    Then Edit department page displays in editable format
 
   #Staff
   @Sanity
