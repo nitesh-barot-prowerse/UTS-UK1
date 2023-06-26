@@ -98,7 +98,7 @@ public class QuotePage {
     public String verifyManageQuotePage() {
         driver.findElement(quoteIcon).click();
         try {
-            Thread.sleep(2000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
@@ -142,7 +142,7 @@ public class QuotePage {
     public void clickOnAddQuoteButton() {
         driver.findElement(addQuoteButton).click();
         try {
-            Thread.sleep(1000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
@@ -187,6 +187,11 @@ public class QuotePage {
 
     public String clickOnMicrochipButton() {
         driver.findElement(microchipButton).click();
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         return driver.findElement(displayedMessage).getText();
     }
 
@@ -234,7 +239,7 @@ public class QuotePage {
 
             cEle.click();
             try {
-                Thread.sleep(1000);
+                Thread.sleep(3000);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
@@ -297,7 +302,7 @@ public class QuotePage {
     public void clickOnSearchButton() {
         driver.findElement(searchButton).click();
         try {
-            Thread.sleep(2000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
@@ -326,7 +331,7 @@ public class QuotePage {
 
     public void selectIncludePaymentCheckBox() {
         try {
-            Thread.sleep(1000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
