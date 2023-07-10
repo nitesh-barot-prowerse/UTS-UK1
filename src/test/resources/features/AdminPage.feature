@@ -154,20 +154,22 @@ Feature: Verify Admin Module Features
     Then Add agent page displays with all details
 
 #Company
-#  @Sanity
-#  Scenario: Manage Company page displays with list of companies by clicking on company icon on administration page
-#    When User clicks on company icon
-#    Then Manage company page displays with list of available companies
-#
-#  @Sanity
-#  Scenario:Filter details on manage company page upon option of state and country drop down
-#    When User clicks on company icon
-#    And User selects options from state and country drop down
-#    Then Appropriate list of company displays on manage company page
-#
-#  @Sanity
-#  Scenario:Add company page displays with all details by clicking on add company button on manage company page
-#    When User clicks on company icon
-#    And User clicks on add company button on manage company page
-#    Then Add company page displays with all details
+  @Sanity
+  Scenario: Manage Company page displays with list of companies by clicking on company icon on administration page
+    When User clicks on company icon
+    Then Manage company page displays with list of available companies
+
+  @Sanity
+  Scenario:Filter details on manage company page upon option of state and country drop down
+    When User clicks on company icon
+    And User selects options from state and country drop down
+    Then Appropriate list of company displays on manage company page
+
+  @Sanity
+  Scenario:Add company page displays with all details by clicking on add company button on manage company page
+    When User clicks on company icon
+    And User clicks on add company button on manage company page
+    Then Add company page displays with all details
+
+
 

@@ -48,11 +48,11 @@ Feature: Verify Quote Module Features
     And User clicks on search button on manage quote page
     Then Appropriate list of quote will display
 
-#  @Stage
-#  Scenario:Fetch quotation based on quote number on manage quote page
-#    When User enters quote number inside search box on manage quote page
-#    And User clicks on search button on manage quote page
-#    Then Appropriate quote information displays on manage quote page
+  @Stage
+  Scenario:Fetch quotation based on quote number on manage quote page
+    When User enters quote number inside search box on manage quote page
+    And User clicks on search button on manage quote page
+    Then Appropriate quote information displays on manage quote page
 
   @Sanity
   Scenario:Verify include payment feature of quote module

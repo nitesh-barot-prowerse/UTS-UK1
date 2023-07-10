@@ -33,6 +33,25 @@ public class AccountPage {
 
     private By clientNameInput = By.cssSelector("input[id='Name']");
 
+    //Bank Account Page
+
+    private By bankAccountIcon=By.xpath("//div[@class='ibox-content']/div/div[1]/a");
+
+    private By displayedMessageAtViewBankAccountPage=By.xpath("//div[@class='ibox-content padding-right7']/div/div/div/div/div");
+
+    private By addBankAccountIcon=By.xpath("//div[@class='form-group pull-right']/div/a[2]");
+
+    private By displayedMessageAtAddBankAccountPage=By.xpath("//div[@class='row wrapper border-bottom white-bg page-heading']/div/h2");
+
+
+    //Manage Receipt Page
+
+    private By manageReceiptIcon=By.xpath("//div[@class='ibox-content']/div/div[2]/a");
+
+    private By addReceiptIcon=By.xpath("//div[@class='form-group pull-right']/div/a[2]");
+
+    private By displayedMessageAtAddAllocatePaymentPage=By.xpath("//div[@class='row wrapper border-bottom white-bg page-heading']/div/h2");
+
 
     public void clickOnAccountIcon() {
         driver.findElement(accountIcon).click();
@@ -632,23 +651,72 @@ public class AccountPage {
 
     }
 
+
+
+
+    //Bank Information page displays with details after clicking on bank code link on manage bank details
+
     public void clickOnBankCode() {
         WebDriverWait cWait = new WebDriverWait(driver, 10);
         List<WebElement> bankCode = cWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@id='gridBankList']/table/tbody/tr/td[2]")));
         for (WebElement cLE : bankCode) {
             cLE.click();
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
             break;
         }
     }
 
     public String verifyBankDetails() {
-        WebDriverWait cWait = new WebDriverWait(driver, 10);
-        List<WebElement> clientInformation = cWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@class='ibox-content padding-right7']/div/div/div/div/div")));
-        String clientInfo = " ";
-        for (WebElement cLE : clientInformation) {
-            clientInfo = clientInfo + cLE.getText() + " ";
+        return driver.findElement(displayedMessageAtViewBankAccountPage).getText();
+
+    }
+
+    //Add Bank page  displays will all details when user clicks on add bank icon on manage bank page
+
+    public void clickOnAddBankIcon() {
+        driver.findElement(addBankAccountIcon).click();
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
         }
-        return clientInfo;
+
+    }
+
+    public String verifyAddBankPage() {
+        return driver.findElement(displayedMessageAtAddBankAccountPage).getText();
+
+    }
+
+    //Add receipt page  displays will all details when user clicks on add receipt icon on manage receipt page
+
+    public void clickOnManageReceiptIcon() {
+        driver.findElement(manageReceiptIcon).click();
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+
+    public void clickOnAddReceiptIcon() {
+        driver.findElement(addReceiptIcon).click();
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    public String verifyAddAllocatePaymentPage() {
+        return driver.findElement(displayedMessageAtAddAllocatePaymentPage).getText();
 
     }
 
