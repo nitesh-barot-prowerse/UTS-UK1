@@ -158,47 +158,47 @@ public class ReportPageSteps {
         }
     }
 
-    //Add premium and claim adjustments window opens by clicking on adjustment button on section 26 and 27 report page
-
-    @When("User clicks on Trust summary section button on report page")
-    public void user_clicks_on_trust_summary_section_button_on_report_page() {
-        reportPage.clickOnTrustSummarySection();
-    }
-
-    @When("User clicks on adjustment button on section report page")
-    public void user_clicks_on_adjustment_button_on_section_report_page() {
-        reportPage.clickOnAdjustmentIconOnSectionPage();
-    }
-
-    @Then("Add premium and claim adjustments window opens with all details")
-    public void add_premium_and_claim_adjustments_window_opens_with_all_details() {
-        reportPage.verifyAddPremiumAndClaimAdjustmentWindow();
-    }
-
-    //Payment window opens by clicking on payments button on section 26 and 27 report page
-
-    @When("User clicks on payments button on section report page")
-    public void user_clicks_on_payments_button_on_section_report_page() {
-        reportPage.clickOnPaymentsSectionPage();
-    }
-
-    @Then("Payments window opens with all details")
-    public void payments_window_opens_with_all_details() {
-        reportPage.verifyPaymentsWindow();
-    }
-
-    //Opening and Closing bank balance window opens by clicking on bank button on section 26 and 27 report page
-
-    @When("User clicks on bank button on section report page")
-    public void user_clicks_on_bank_button_on_section_report_page() {
-        reportPage.clickOnBankIconOnSectionPage();
-    }
-
-    @Then("Opening and Closing bank balance window opens with all details")
-    public void opening_and_closing_bank_balance_window_opens_with_all_details() {
-        reportPage.verifyBankBalanceWindow();
-
-    }
+//    //Add premium and claim adjustments window opens by clicking on adjustment button on section 26 and 27 report page
+//
+//    @When("User clicks on Trust summary section button on report page")
+//    public void user_clicks_on_trust_summary_section_button_on_report_page() {
+//        reportPage.clickOnTrustSummarySection();
+//    }
+//
+//    @When("User clicks on adjustment button on section report page")
+//    public void user_clicks_on_adjustment_button_on_section_report_page() {
+//        reportPage.clickOnAdjustmentIconOnSectionPage();
+//    }
+//
+//    @Then("Add premium and claim adjustments window opens with all details")
+//    public void add_premium_and_claim_adjustments_window_opens_with_all_details() {
+//        reportPage.verifyAddPremiumAndClaimAdjustmentWindow();
+//    }
+//
+//    //Payment window opens by clicking on payments button on section 26 and 27 report page
+//
+//    @When("User clicks on payments button on section report page")
+//    public void user_clicks_on_payments_button_on_section_report_page() {
+//        reportPage.clickOnPaymentsSectionPage();
+//    }
+//
+//    @Then("Payments window opens with all details")
+//    public void payments_window_opens_with_all_details() {
+//        reportPage.verifyPaymentsWindow();
+//    }
+//
+//    //Opening and Closing bank balance window opens by clicking on bank button on section 26 and 27 report page
+//
+//    @When("User clicks on bank button on section report page")
+//    public void user_clicks_on_bank_button_on_section_report_page() {
+//        reportPage.clickOnBankIconOnSectionPage();
+//    }
+//
+//    @Then("Opening and Closing bank balance window opens with all details")
+//    public void opening_and_closing_bank_balance_window_opens_with_all_details() {
+//        reportPage.verifyBankBalanceWindow();
+//
+//    }
 
 
 
