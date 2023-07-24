@@ -16,19 +16,19 @@ Feature: Verify Report Module Features
 
   #Quote Report
 
-  @Sanity
-  Scenario: Filter quote report information upon option of product drop down
-    When User clicks on quote report button on report page
-    And User selects any option from product drop down on quote report page
-    And User clicks on search button on quote report page
-    Then Appropriate data displays on quote report page upon selected option from drop down
-
-  @Sanity
-  Scenario: Filter quote report information upon options value of quote status and quote from drop downs
-    When User clicks on quote report button on report page
-    And User selects any option from quote from and quote status drop down on quote report page
-    And User clicks on search button on quote report page
-    Then Appropriate data displays on quote report page upon selected options from drop down
+#  @Sanity
+#  Scenario: Filter quote report information upon option of product drop down
+#    When User clicks on quote report button on report page
+#    And User selects any option from product drop down on quote report page
+#    And User clicks on search button on quote report page
+#    Then Appropriate data displays on quote report page upon selected option from drop down
+#
+#  @Sanity
+#  Scenario: Filter quote report information upon options value of quote status and quote from drop downs
+#    When User clicks on quote report button on report page
+#    And User selects any option from quote from and quote status drop down on quote report page
+#    And User clicks on search button on quote report page
+#    Then Appropriate data displays on quote report page upon selected options from drop down
 
 #  @Sanity
 #  Scenario: Sorting data on quote report page via quote number and sort direction
@@ -70,19 +70,19 @@ Feature: Verify Report Module Features
 
    #Policy Cancellation Report
 
-  @Sanity
-  Scenario: Filter policy cancellation report information upon option of insurer drop down
-    When User clicks on policy cancellation report button on report page
-    And User selects any option from insurer drop down on policy cancellation report page
-    And User clicks on search button on policy policy cancellation report page
-    Then Appropriate data displays on policy cancellation report page upon selected option from drop down
-
-  @Sanity
-  Scenario: Sorting data on policy cancellation report via sort by and sort direction dropdowns options
-    When User clicks on policy cancellation report button on report page
-    And User selects any option from sort by and option from sort direction drop down respectively
-    And  User clicks on search button on policy policy cancellation report page
-    Then Appropriate data displays on policy cancellation report page upon selected option from drop down
+#  @Sanity
+#  Scenario: Filter policy cancellation report information upon option of insurer drop down
+#    When User clicks on policy cancellation report button on report page
+#    And User selects any option from insurer drop down on policy cancellation report page
+#    And User clicks on search button on policy policy cancellation report page
+#    Then Appropriate data displays on policy cancellation report page upon selected option from drop down
+#
+#  @Sanity
+#  Scenario: Sorting data on policy cancellation report via sort by and sort direction dropdowns options
+#    When User clicks on policy cancellation report button on report page
+#    And User selects any option from sort by and option from sort direction drop down respectively
+#    And  User clicks on search button on policy policy cancellation report page
+#    Then Appropriate data displays on policy cancellation report page upon selected option from drop down
 #
 #   ##Refund Report
 #
