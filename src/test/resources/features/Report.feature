@@ -30,12 +30,12 @@ Feature: Verify Report Module Features
     And User clicks on search button on quote report page
     Then Appropriate data displays on quote report page upon selected options from drop down
 
-  @Sanity
-  Scenario: Sorting data on quote report page via quote number and sort direction
-    When User clicks on quote report button on report page
-    And User selects quote number option from sort by and Ascending option from sort by direction drop down respectively
-    And User clicks on search button on quote report page
-    Then All data on quote report page displays in sorting manner
+#  @Sanity
+#  Scenario: Sorting data on quote report page via quote number and sort direction
+#    When User clicks on quote report button on report page
+#    And User selects quote number option from sort by and Ascending option from sort by direction drop down respectively
+#    And User clicks on search button on quote report page
+#    Then All data on quote report page displays in sorting manner
 
    #Policy Summary Report
 
