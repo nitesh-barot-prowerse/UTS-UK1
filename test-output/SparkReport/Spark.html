@@ -51,7 +51,7 @@
           </li>
             <li class="m-r-10">
                 <a href="#">
-                    <span class="badge badge-primary">Jul 7, 2023 11:02:44 am</span>
+                    <span class="badge badge-primary">Jul 28, 2023 01:07:06 pm</span>
                 </a>
             </li>
         </ul>
@@ -73,14 +73,6 @@
             <i class="fa fa-tag"></i>
           </span>
           <span class="title">Tags</span>
-        </a>
-      </li>
-      <li class="nav-item dropdown" onclick="toggleView('exception-view')">
-        <a id="nav-ex" class="dropdown-toggle" href="exception.html">
-          <span class="icon-holder">
-            <i class="fa fa-bug"></i>
-          </span>
-          <span class="title">Exception</span>
         </a>
       </li>
       <li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
@@ -112,11 +104,11 @@
 					</a>
 					<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
 						<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success pull-right"></span></a>
-						<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger pull-right"></span></a>
 						
 						
 						
-						<a class="dropdown-item" status="skip" href="#"><span>Skip</span><span class="status warning pull-right"></span></a>
+						
+						
 						<div class="dropdown-divider"></div>
 						<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 					</ul>
@@ -133,28 +125,28 @@
 		</div>
 		<div class="test-list-wrapper scrollable">
 			<ul class="test-list-item">
-				<li class="test-item"  status="fail" test-id="1"
+				<li class="test-item"  status="pass" test-id="1"
 					author=""
 					tag=""
 					device="">
-					<div class="status-avatar fail-bg">
-						<i class="fa fa-times text-white"></i>
+					<div class="status-avatar pass-bg">
+						<i class="fa fa-check text-white"></i>
 					</div>
 					<div class="open-test">
 						<div class="test-detail">
-							<p class="name">Verify Report Module Features</p>
-							<p class="duration text-sm">0h 0m 41s+329ms</p>
-							<span class="datetime">11:02:48 am</span>
+							<p class="name">Verify Policy Module Features</p>
+							<p class="duration text-sm">0h 0m 22s+699ms</p>
+							<span class="datetime">13:07:15 pm</span>
 						</div>
 					</div>
 					<div class="test-contents d-none">
 						<div class="detail-head">
 							<div class="p-v-10 d-inline-block">
 								<div class="info">
-									<h5 class="test-status text-fail">Verify Report Module Features</h5>
-									<span class='badge badge-success'>07.07.2023 11:02:48</span>
-									<span class='badge badge-danger'>07.07.2023 11:03:29</span>
-									<span class='badge badge-default'>0h 0m 41s+329ms</span>
+									<h5 class="test-status text-pass">Verify Policy Module Features</h5>
+									<span class='badge badge-success'>07.28.2023 13:07:15</span>
+									<span class='badge badge-danger'>07.28.2023 13:07:37</span>
+									<span class='badge badge-default'>0h 0m 22s+699ms</span>
 								</div>
 								<div class="m-t-10 m-l-5">
 									
@@ -166,13 +158,10 @@
 	<div class="card">
 		<div class="card-header" role="tab">
 			<div class="card-title pl-3">
-				<div class="node">Add premium and claim adjustments window opens by clicking on adjustment button on section 26 and 27 report page</div>
-				<div class="status-avatar float-left fail-bg">
-					<i class="fa fa-times text-white"></i>
+				<div class="node">Verify appropriate details should reflect by clicking on exclusion tab on policy information page</div>
+				<div class="status-avatar float-left pass-bg">
+					<i class="fa fa-check text-white"></i>
 				</div>
-					<div class="status-avatar float-right mr-4">
-						<i class="fa fa-paperclip"></i>
-					</div>
 			</div>
 		</div>
 				<div class="collapse">
@@ -184,264 +173,41 @@
 								<span>Given User should log in with username "kavyajakkula" and password "VLJakkkav$9" to the admin panel</span>
 							</div>
 				<div class="details"></div>
-							<div class="d-flex align-items-center justify-content-start when" title="steps.ReportPageSteps.user_clicks_on_reports_icon_on_left_tool_bar()">
+							<div class="d-flex align-items-center justify-content-start when" title="steps.PolicyPageSteps.user_clicks_on_policy_icon_on_left_tool_bar()">
 								<span class="alert-icon pass-bg">
 									<i class="fa fa-check text-white"></i>
 								</span>
-								<span>When User clicks on reports icon on left tool bar</span>
+								<span>When User clicks on policy icon on left tool bar</span>
 							</div>
 				<div class="details"></div>
-							<div class="d-flex align-items-center justify-content-start when" title="steps.ReportPageSteps.user_clicks_on_trust_summary_section_button_on_report_page()">
+							<div class="d-flex align-items-center justify-content-start when" title="steps.PolicyPageSteps.user_clicks_on_policy_number_link_on_manage_policy_page()">
 								<span class="alert-icon pass-bg">
 									<i class="fa fa-check text-white"></i>
 								</span>
-								<span>When User clicks on Trust summary section button on report page</span>
+								<span>When User clicks on policy number link on manage policy page</span>
 							</div>
 				<div class="details"></div>
-							<div class="d-flex align-items-center justify-content-start and" title="steps.ReportPageSteps.user_clicks_on_adjustment_button_on_section_report_page()">
-								<span class="alert-icon fail-bg">
-									<i class="fa fa-times text-white"></i>
+							<div class="d-flex align-items-center justify-content-start and" title="steps.PolicyPageSteps.user_clicks_on_exclusion_tab_on_policy_information_page()">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
 								</span>
-								<span>And User clicks on adjustment button on section report page</span>
+								<span>And User clicks on exclusion tab on policy information page</span>
 							</div>
-				<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='search']/div/div[5]/div[3]/div/a"}
-  (Session info: chrome=114.0.5735.199)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'PROWERSE-014', ip: '192.168.1.6', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\prowe\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50521}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d88bc224baf0e8989e7fc0d93c40a52c
-*** Element info: {Using=xpath, value=//div[@id='search']/div/div[5]/div[3]/div/a}
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at pages.ReportPage.clickOnAdjustmentIconOnSectionPage(ReportPage.java:824)
-	at steps.ReportPageSteps.user_clicks_on_adjustment_button_on_section_report_page(ReportPageSteps.java:170)
-	at ✽.User clicks on adjustment button on section report page(file:///C:/Users/prowe/IdeaProjects/UTS-UK1/src/test/resources/features/Report.feature:66)
-</textarea>
-							<div class="d-flex align-items-center justify-content-start then" title="steps.ReportPageSteps.add_premium_and_claim_adjustments_window_opens_with_all_details()">
-								<span class="alert-icon skip-bg">
-									<i class="fa fa-long-arrow-right text-white"></i>
+				<div class="details"></div>
+							<div class="d-flex align-items-center justify-content-start then" title="steps.PolicyPageSteps.user_will_able_to_see_appropriate_data_upon_clicking_exclusion_tab()">
+								<span class="alert-icon pass-bg">
+									<i class="fa fa-check text-white"></i>
 								</span>
-								<span>Then Add premium and claim adjustments window opens with all details</span>
+								<span>Then User will able to see appropriate data upon clicking exclusion tab</span>
 							</div>
-				<div class="details">Step skipped</div>
+				<div class="details"></div>
 							<div class="d-flex align-items-center justify-content-start asterisk" title="">
 								<span class="alert-icon pass-bg">
 									<i class="fa fa-check text-white"></i>
 								</span>
 								<span>hook.hooks.displayUrl(io.cucumber.java.Scenario)</span>
 							</div>
-				<div class="details">https://stage.petcovergroup.com:8888/</div>
-							<div class="d-flex align-items-center justify-content-start asterisk" title="">
-								<span class="alert-icon pass-bg">
-									<i class="fa fa-check text-white"></i>
-								</span>
-								<span>hook.hooks.takeScreenShotOnFailure(io.cucumber.java.Scenario)</span>
-							</div>
-				<div class="details"></div>
-				<div class="details"><img class='r-img' onerror='this.style.display="none"' data-featherlight='../embedded1.png' src='../embedded1.png'></div>
-					</div>
-				</div>
-	</div>
-	<div class="card">
-		<div class="card-header" role="tab">
-			<div class="card-title pl-3">
-				<div class="node">Payment window opens by clicking on payments button on section 26 and 27 report page</div>
-				<div class="status-avatar float-left fail-bg">
-					<i class="fa fa-times text-white"></i>
-				</div>
-					<div class="status-avatar float-right mr-4">
-						<i class="fa fa-paperclip"></i>
-					</div>
-			</div>
-		</div>
-				<div class="collapse">
-					<div class="card-body">
-							<div class="d-flex align-items-center justify-content-start given" title="steps.ClientPageSteps.user_should_log_in_with_username_and_password_to_the_admin_panel(java.lang.String,java.lang.String)">
-								<span class="alert-icon pass-bg">
-									<i class="fa fa-check text-white"></i>
-								</span>
-								<span>Given User should log in with username "kavyajakkula" and password "VLJakkkav$9" to the admin panel</span>
-							</div>
-				<div class="details"></div>
-							<div class="d-flex align-items-center justify-content-start when" title="steps.ReportPageSteps.user_clicks_on_reports_icon_on_left_tool_bar()">
-								<span class="alert-icon pass-bg">
-									<i class="fa fa-check text-white"></i>
-								</span>
-								<span>When User clicks on reports icon on left tool bar</span>
-							</div>
-				<div class="details"></div>
-							<div class="d-flex align-items-center justify-content-start when" title="steps.ReportPageSteps.user_clicks_on_trust_summary_section_button_on_report_page()">
-								<span class="alert-icon pass-bg">
-									<i class="fa fa-check text-white"></i>
-								</span>
-								<span>When User clicks on Trust summary section button on report page</span>
-							</div>
-				<div class="details"></div>
-							<div class="d-flex align-items-center justify-content-start and" title="steps.ReportPageSteps.user_clicks_on_payments_button_on_section_report_page()">
-								<span class="alert-icon fail-bg">
-									<i class="fa fa-times text-white"></i>
-								</span>
-								<span>And User clicks on payments button on section report page</span>
-							</div>
-				<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='search']/div/div[5]/div[2]/div/a"}
-  (Session info: chrome=114.0.5735.199)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'PROWERSE-014', ip: '192.168.1.6', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\prowe\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50548}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 65498cb93fb59c5ca9c5fbe61f707008
-*** Element info: {Using=xpath, value=//div[@id='search']/div/div[5]/div[2]/div/a}
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at pages.ReportPage.clickOnPaymentsSectionPage(ReportPage.java:842)
-	at steps.ReportPageSteps.user_clicks_on_payments_button_on_section_report_page(ReportPageSteps.java:182)
-	at ✽.User clicks on payments button on section report page(file:///C:/Users/prowe/IdeaProjects/UTS-UK1/src/test/resources/features/Report.feature:72)
-</textarea>
-							<div class="d-flex align-items-center justify-content-start then" title="steps.ReportPageSteps.payments_window_opens_with_all_details()">
-								<span class="alert-icon skip-bg">
-									<i class="fa fa-long-arrow-right text-white"></i>
-								</span>
-								<span>Then Payments window opens with all details</span>
-							</div>
-				<div class="details">Step skipped</div>
-							<div class="d-flex align-items-center justify-content-start asterisk" title="">
-								<span class="alert-icon pass-bg">
-									<i class="fa fa-check text-white"></i>
-								</span>
-								<span>hook.hooks.displayUrl(io.cucumber.java.Scenario)</span>
-							</div>
-				<div class="details">https://stage.petcovergroup.com:8888/</div>
-							<div class="d-flex align-items-center justify-content-start asterisk" title="">
-								<span class="alert-icon pass-bg">
-									<i class="fa fa-check text-white"></i>
-								</span>
-								<span>hook.hooks.takeScreenShotOnFailure(io.cucumber.java.Scenario)</span>
-							</div>
-				<div class="details"></div>
-				<div class="details"><img class='r-img' onerror='this.style.display="none"' data-featherlight='../embedded2.png' src='../embedded2.png'></div>
-					</div>
-				</div>
-	</div>
-	<div class="card">
-		<div class="card-header" role="tab">
-			<div class="card-title pl-3">
-				<div class="node">Opening and Closing bank balance window opens by clicking on bank button on section 26 and 27 report page</div>
-				<div class="status-avatar float-left fail-bg">
-					<i class="fa fa-times text-white"></i>
-				</div>
-					<div class="status-avatar float-right mr-4">
-						<i class="fa fa-paperclip"></i>
-					</div>
-			</div>
-		</div>
-				<div class="collapse">
-					<div class="card-body">
-							<div class="d-flex align-items-center justify-content-start given" title="steps.ClientPageSteps.user_should_log_in_with_username_and_password_to_the_admin_panel(java.lang.String,java.lang.String)">
-								<span class="alert-icon pass-bg">
-									<i class="fa fa-check text-white"></i>
-								</span>
-								<span>Given User should log in with username "kavyajakkula" and password "VLJakkkav$9" to the admin panel</span>
-							</div>
-				<div class="details"></div>
-							<div class="d-flex align-items-center justify-content-start when" title="steps.ReportPageSteps.user_clicks_on_reports_icon_on_left_tool_bar()">
-								<span class="alert-icon pass-bg">
-									<i class="fa fa-check text-white"></i>
-								</span>
-								<span>When User clicks on reports icon on left tool bar</span>
-							</div>
-				<div class="details"></div>
-							<div class="d-flex align-items-center justify-content-start when" title="steps.ReportPageSteps.user_clicks_on_trust_summary_section_button_on_report_page()">
-								<span class="alert-icon pass-bg">
-									<i class="fa fa-check text-white"></i>
-								</span>
-								<span>When User clicks on Trust summary section button on report page</span>
-							</div>
-				<div class="details"></div>
-							<div class="d-flex align-items-center justify-content-start and" title="steps.ReportPageSteps.user_clicks_on_bank_button_on_section_report_page()">
-								<span class="alert-icon fail-bg">
-									<i class="fa fa-times text-white"></i>
-								</span>
-								<span>And User clicks on bank button on section report page</span>
-							</div>
-				<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='search']/div/div[5]/div[1]/div/a"}
-  (Session info: chrome=114.0.5735.199)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'PROWERSE-014', ip: '192.168.1.6', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.199, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\prowe\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50573}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ba926dffffdb4d9426b6f15d0f2d08ff
-*** Element info: {Using=xpath, value=//div[@id='search']/div/div[5]/div[1]/div/a}
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at pages.ReportPage.clickOnBankIconOnSectionPage(ReportPage.java:860)
-	at steps.ReportPageSteps.user_clicks_on_bank_button_on_section_report_page(ReportPageSteps.java:194)
-	at ✽.User clicks on bank button on section report page(file:///C:/Users/prowe/IdeaProjects/UTS-UK1/src/test/resources/features/Report.feature:78)
-</textarea>
-							<div class="d-flex align-items-center justify-content-start then" title="steps.ReportPageSteps.opening_and_closing_bank_balance_window_opens_with_all_details()">
-								<span class="alert-icon skip-bg">
-									<i class="fa fa-long-arrow-right text-white"></i>
-								</span>
-								<span>Then Opening and Closing bank balance window opens with all details</span>
-							</div>
-				<div class="details">Step skipped</div>
-							<div class="d-flex align-items-center justify-content-start asterisk" title="">
-								<span class="alert-icon pass-bg">
-									<i class="fa fa-check text-white"></i>
-								</span>
-								<span>hook.hooks.displayUrl(io.cucumber.java.Scenario)</span>
-							</div>
-				<div class="details">https://stage.petcovergroup.com:8888/</div>
-							<div class="d-flex align-items-center justify-content-start asterisk" title="">
-								<span class="alert-icon pass-bg">
-									<i class="fa fa-check text-white"></i>
-								</span>
-								<span>hook.hooks.takeScreenShotOnFailure(io.cucumber.java.Scenario)</span>
-							</div>
-				<div class="details"></div>
-				<div class="details"><img class='r-img' onerror='this.style.display="none"' data-featherlight='../embedded3.png' src='../embedded3.png'></div>
+				<div class="details">https://fitlocal.britishpetinsurance.co.uk:93/</div>
 					</div>
 				</div>
 	</div>
@@ -489,10 +255,10 @@ Session ID: ba926dffffdb4d9426b6f15d0f2d08ff
 					<div class="open-test">
 						<div class="test-detail">
 							<p class="name">@Sanity</p>
-							<p class="duration text-sm">3 tests</p>
+							<p class="duration text-sm">1 tests</p>
 							<span class="datetime">
+							<span class='badge badge-success'>1</span>
 							
-							<span class='badge badge-danger'>3</span>
 							
 							
 							</span>
@@ -501,8 +267,8 @@ Session ID: ba926dffffdb4d9426b6f15d0f2d08ff
 					<div class="test-contents d-none">
 						<div class="info">
 							<h4>@Sanity</h4>
+							<span status="pass" class='badge badge-success'>1 passed</span>
 							
-							<span status="fail" class='badge badge-danger'>3 failed</span>
 							
 							
 						</div>
@@ -515,148 +281,17 @@ Session ID: ba926dffffdb4d9426b6f15d0f2d08ff
 								</tr>
 							</thead>
 							<tbody>
-								<tr class="tag-test-status" status="fail">
+								<tr class="tag-test-status" status="pass">
 									<td>
-										<div class='status-avatar fail-bg'>
-											<i class="fa fa-times text-white"></i>
+										<div class='status-avatar pass-bg'>
+											<i class="fa fa-check text-white"></i>
 										</div>
 									</td>
-									<td>11:02:48 am</td>
+									<td>13:07:15 pm</td>
 									<td class='linked' test-id='2'>
-										Add premium and claim adjustments window opens by clicking on adjustment button on section 26 and 27 report page
+										Verify appropriate details should reflect by clicking on exclusion tab on policy information page
 										<div class="">
-											<span class="badge badge-default">Verify Report Module Features.Add premium and claim adjustments window opens by clicking on adjustment button on section 26 and 27 report page</span>
-										</div>
-									</td>
-								</tr>
-								<tr class="tag-test-status" status="fail">
-									<td>
-										<div class='status-avatar fail-bg'>
-											<i class="fa fa-times text-white"></i>
-										</div>
-									</td>
-									<td>11:03:00 am</td>
-									<td class='linked' test-id='13'>
-										Payment window opens by clicking on payments button on section 26 and 27 report page
-										<div class="">
-											<span class="badge badge-default">Verify Report Module Features.Payment window opens by clicking on payments button on section 26 and 27 report page</span>
-										</div>
-									</td>
-								</tr>
-								<tr class="tag-test-status" status="fail">
-									<td>
-										<div class='status-avatar fail-bg'>
-											<i class="fa fa-times text-white"></i>
-										</div>
-									</td>
-									<td>11:03:18 am</td>
-									<td class='linked' test-id='24'>
-										Opening and Closing bank balance window opens by clicking on bank button on section 26 and 27 report page
-										<div class="">
-											<span class="badge badge-default">Verify Report Module Features.Opening and Closing bank balance window opens by clicking on bank button on section 26 and 27 report page</span>
-										</div>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</li>
-			</ul>
-		</div>
-	</div>
-	<div class="test-content scrollable">
-		<div class="test-content-tools">
-			<ul>
-				<li>
-					<a class="back-to-test" href="javascript:void(0)">
-					<i class="fa fa-arrow-left"></i>
-					</a>
-				</li>
-			</ul>
-		</div>
-		<div class="test-content-detail">
-			<div class="detail-body"></div>
-		</div>
-	</div>
-</div><div class="test-wrapper row exception-view attributes-view">
-	<div class="test-list">
-		<div class="test-list-tools">
-			<ul class="tools pull-left">
-				<li>
-					<a href="">
-					<span class="font-size-14">Exception</span>
-					</a>
-				</li>
-			</ul>
-			<ul class="tools text-right">
-				<li>
-					<a href="#">
-					<span class="badge badge-primary">1</span>
-					</a>
-				</li>
-			</ul>
-		</div>
-		<div class="test-list-wrapper scrollable">
-			<ul class="test-list-item">
-				<li class="test-item">
-					<div class="open-test">
-						<div class="test-detail">
-							<p class="name">org.openqa.selenium.NoSuchElementException</p>
-							<p class="duration text-sm">3 tests</p>
-						</div>
-					</div>
-					<div class="test-contents d-none">
-						<div class="info">
-							<h4>org.openqa.selenium.NoSuchElementException</h4>
-						</div>
-						<table class='table table-sm mt-4'>
-							<thead>
-								<tr>
-									<th class="status-col">Status</th>
-									<th class="timestamp-col">Timestamp</th>
-									<th>TestName</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>
-										<div class='status-avatar fail-bg'>
-											<i class="fa fa-times text-white"></i>
-										</div>
-									</td>
-									<td>11:02:57 am</td>
-									<td class='linked' test-id='8'>
-										And User clicks on adjustment button on section report page
-										<div class="">
-											<span class="badge badge-default">Add premium and claim adjustments window opens by clicking on adjustment button on section 26 and 27 report page</span>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<div class='status-avatar fail-bg'>
-											<i class="fa fa-times text-white"></i>
-										</div>
-									</td>
-									<td>11:03:10 am</td>
-									<td class='linked' test-id='19'>
-										And User clicks on payments button on section report page
-										<div class="">
-											<span class="badge badge-default">Payment window opens by clicking on payments button on section 26 and 27 report page</span>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<div class='status-avatar fail-bg'>
-											<i class="fa fa-times text-white"></i>
-										</div>
-									</td>
-									<td>11:03:29 am</td>
-									<td class='linked' test-id='30'>
-										And User clicks on bank button on section report page
-										<div class="">
-											<span class="badge badge-default">Opening and Closing bank balance window opens by clicking on bank button on section 26 and 27 report page</span>
+											<span class="badge badge-default">Verify Policy Module Features.Verify appropriate details should reflect by clicking on exclusion tab on policy information page</span>
 										</div>
 									</td>
 								</tr>
@@ -695,12 +330,12 @@ Session ID: ba926dffffdb4d9426b6f15d0f2d08ff
 					</div>
 				</div>
 				<div class="card-footer">
-					<div><small data-tooltip='0%'>
-						<b>0</b> features passed
+					<div><small data-tooltip='100%'>
+						<b>1</b> features passed
 						</small>
 					</div>
 					<div>
-						<small data-tooltip='100%'><b>1</b> features failed, 
+						<small data-tooltip='0%'><b>0</b> features failed, 
 						<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 						</small>
 					</div>
@@ -718,9 +353,9 @@ Session ID: ba926dffffdb4d9426b6f15d0f2d08ff
 					</div>
 				</div>
 				<div class="card-footer">
-					<div><small data-tooltip='0%'><b>0</b> scenarios passed</small></div>
+					<div><small data-tooltip='100%'><b>1</b> scenarios passed</small></div>
 					<div>
-						<small data-tooltip='100%'><b>3</b> scenarios failed, 
+						<small data-tooltip='0%'><b>0</b> scenarios failed, 
 						<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 						</small>
 					</div>
@@ -738,10 +373,10 @@ Session ID: ba926dffffdb4d9426b6f15d0f2d08ff
 					</div>
 				</div>
 				<div class="card-footer">
-					<div><small data-tooltip='71.429%'><b>15</b> steps passed</small></div>
+					<div><small data-tooltip='100%'><b>6</b> steps passed</small></div>
 					<div>
-						<small data-tooltip='14.286%'><b>3</b> steps failed, 
-						<b>3</b> skipped, <b data-tooltip='14.286%'>0</b> others
+						<small data-tooltip='0%'><b>0</b> steps failed, 
+						<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 						</small>
 					</div>
 				</div>
@@ -758,7 +393,7 @@ Session ID: ba926dffffdb4d9426b6f15d0f2d08ff
 							<h2 class="font-size-28 font-weight-light mt-3">1</h2>
 							<span class="text-semibold text-success font-size-15">
 							<i class="ti-arrow-up font-size-11"></i> 
-							<span>.00%</span>
+							<span>100.00%</span>
 							</span>
 						</div>
 						<div class="align-self-end">
@@ -774,10 +409,10 @@ Session ID: ba926dffffdb4d9426b6f15d0f2d08ff
 					<div class="media justify-content-between">
 						<div class="card-header">
 							<h6 class="card-title">Scenarios</h6>
-							<h2 class="font-size-28 font-weight-light mt-3">3</h2>
+							<h2 class="font-size-28 font-weight-light mt-3">1</h2>
 							<span class="text-semibold text-success font-size-15">
 							<i class="ti-arrow-up font-size-11"></i> 
-							<span>.00%</span>
+							<span>100.00%</span>
 							</span>
 						</div>
 						<div class="align-self-end">
@@ -793,7 +428,7 @@ Session ID: ba926dffffdb4d9426b6f15d0f2d08ff
 					<div class="media justify-content-between">
 						<div class="card-header">
 							<h6 class="card-title">Start</h6>
-							<h4 class="font-weight-light mt-4">Jul 7, 2023 11:02:44 am</h4>
+							<h4 class="font-weight-light mt-4">Jul 28, 2023 01:07:06 pm</h4>
 							<span class="text-semibold text-success font-size-15">
 						</div>
 						<div class="align-self-end">
@@ -809,7 +444,7 @@ Session ID: ba926dffffdb4d9426b6f15d0f2d08ff
 					<div class="media justify-content-between">
 						<div class="card-header">
 							<h6 class="card-title">Duration</h6>
-							<h4 class="font-weight-light mt-4">0h 0m 45s+51ms</h4>
+							<h4 class="font-weight-light mt-4">0h 0m 31s+614ms</h4>
 							<span class="text-semibold font-size-15">
 						</div>
 						<div class="align-self-end">
@@ -855,12 +490,12 @@ Session ID: ba926dffffdb4d9426b6f15d0f2d08ff
 						<tbody>
 							<tr>
 								<td>@Sanity</td>
+								<td>1</td>
 								<td>0</td>
-								<td>3</td>
 								<td>0</td>
 								<td>0</td>
 								<td>
-									0%
+									100%
 								</td>
 							</tr>
 						</tbody>
@@ -912,48 +547,48 @@ Session ID: ba926dffffdb4d9426b6f15d0f2d08ff
 <script>
 	var statusGroup = {
 	    parentCount: 1,
-		passParent: 0,
-		failParent: 1,
+		passParent: 1,
+		failParent: 0,
 		fatalParent: 0,
 		errorParent: 0,
 		warningParent: 0,
 		skipParent: 0,
-		exceptionsParent: 1,
-		childCount: 3,
-		passChild: 0,
-		failChild: 3,
+		exceptionsParent: 0,
+		childCount: 1,
+		passChild: 1,
+		failChild: 0,
 		fatalChild: 0,
 		errorChild: 0,
 		warningChild: 0,
 		skipChild: 0,
 		infoChild: 0,
 		debugChild: 0,
-		exceptionsChild: 3,
-		grandChildCount: 21,
-		passGrandChild: 15,
-		failGrandChild: 3,
+		exceptionsChild: 0,
+		grandChildCount: 6,
+		passGrandChild: 6,
+		failGrandChild: 0,
 		fatalGrandChild: 0,
 		errorGrandChild: 0,
 		warningGrandChild: 0,
-		skipGrandChild: 3,
+		skipGrandChild: 0,
 		infoGrandChild: 0,
 		debugGrandChild: 0,
-		exceptionsGrandChild: 6,
-		eventsCount: 21,
-		passEvents: 9,
-		failEvents: 3,
+		exceptionsGrandChild: 0,
+		eventsCount: 6,
+		passEvents: 5,
+		failEvents: 0,
 		fatalEvents: 0,
 		errorEvents: 0,
 		warningEvents: 0,
-		skipEvents: 3,
-		infoEvents: 6,
+		skipEvents: 0,
+		infoEvents: 1,
 		debugEvents: 0,
 		exceptionsEvents: 0
 	};
 </script>
 <script>
 	var timeline = {
-	        "Verify Report Module Features":41.329
+	        "Verify Policy Module Features":22.699
 	};
 </script>
                 </div>

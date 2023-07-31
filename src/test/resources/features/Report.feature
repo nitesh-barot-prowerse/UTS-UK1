@@ -14,7 +14,7 @@ Feature: Verify Report Module Features
     Then Respected report page displays
 
 
-  Quote Report
+  #Quote Report
 
   @Sanity
   Scenario: Filter quote report information upon option of product drop down
@@ -60,7 +60,7 @@ Feature: Verify Report Module Features
     And User clicks on search button on policy summary report page
     Then Appropriate data displays on policy summary report page upon selected option from both drop down
 
-  Policy Payment history report
+  #Policy Payment history report
 
   Scenario: Filter Policy Payment history report information upon from and to date
     When User clicks on policy payment history button on report page
@@ -68,7 +68,7 @@ Feature: Verify Report Module Features
     And User clicks on search button on policy policy payment history page page
     Then Appropriate data displays on policy payment history page upon selected option from drop down
 
-   Policy Cancellation Report
+   #Policy Cancellation Report
 
   @Sanity
   Scenario: Filter policy cancellation report information upon option of insurer drop down
