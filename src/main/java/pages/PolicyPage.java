@@ -191,7 +191,7 @@ public class PolicyPage {
 
     public String clickOnPolicyNumberLink() {
         WebDriverWait cWait = new WebDriverWait(driver, 10);
-        List<WebElement> totalColumn = cWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@id='gridName']/table/tbody[1]/tr/td[3]/a")));
+        List<WebElement> totalColumn = cWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@id='gridName']/table/tbody[1]/tr/td[4]/a")));
         String displayMessage=" ";
         for (WebElement cEle : totalColumn) {
             cEle.click();
@@ -221,7 +221,7 @@ public class PolicyPage {
     public void clickPolicyPageToDownloadFile()
     {
         WebDriverWait cWait = new WebDriverWait(driver, 10);
-        List<WebElement> totalColumn = cWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@id='gridName']/table/tbody[1]/tr/td[3]/a")));
+        List<WebElement> totalColumn = cWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@id='gridName']/table/tbody[1]/tr[1]/td[4]/a")));
 
         for (WebElement cEle : totalColumn) {
             cEle.click();
