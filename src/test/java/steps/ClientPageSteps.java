@@ -12,7 +12,7 @@ import pages.LogInPage;
 public class ClientPageSteps {
 
     ClientPage clientPage = new ClientPage(DriverFactory.getDriver());
-    String clientNumber=" ";
+    String clientNumber = " ";
 
     @Given("User should log in with username {string} and password {string} to the admin panel")
     public void user_should_log_in_with_username_and_password_to_the_admin_panel(String string, String string2) {
@@ -58,6 +58,135 @@ public class ClientPageSteps {
         Assert.assertEquals(clientCode, "RAOA-0001");
     }
 
+    @When("User clicks on client code link  on manage client page")
+    public void user_clicks_on_client_code_link_on_manage_client_page() {
+        String Message = clientPage.clickOnClientCodeOnManageClient();
+
+        if (Message.length() > 0) {
+            System.out.println(Message);
+        } else {
+            Assert.fail();
+        }
+
+    }
+
+    @Then("View client page displays with all details")
+    public void view_client_page_displays_with_all_details() {
+
+    }
+
+    //Edit client page should display in editable format by clicking on edit client icon on cog dropdown menu on view client page
+
+    @When("User clicks on edit client icon on cog dropdown menu on view client page")
+    public void user_clicks_on_edit_client_icon_on_cog_dropdown_menu_on_view_client_page() {
+        clientPage.clickOnEditClientIcon();
+
+    }
+
+    @Then("Edit client page displays in editable format")
+    public void edit_client_page_displays_in_editable_format() {
+        clientPage.verifyEditClientPage();
+
+    }
+
+    //Add quote page should display in editable format by clicking on add quote icon on cog dropdown menu on view client page
+
+    @When("User clicks on add quote icon on cog dropdown menu on manage client page")
+    public void user_clicks_on_add_quote_icon_on_cog_dropdown_menu_on_manage_client_page() {
+        clientPage.clickOnAddQuoteIcon();
+    }
+
+    @Then("Add quote page should display in editable format")
+    public void add_quote_page_should_display_in_editable_format() {
+        clientPage.verifyAddQuotePage();
+    }
+
+    //Policies details of client displays by clicking on policy tab on view client page
+
+    @When("User clicks on policy tab on view client page")
+    public void user_clicks_on_policy_tab_on_view_client_page() {
+        clientPage.clickOnPolicyIcon();
+
+    }
+
+    @Then("Policies details should display on view client page")
+    public void policies_details_should_display_on_view_client_page() {
+        String pDetails = clientPage.verifyPolicyDetails();
+        if (pDetails.length() > 0) {
+            System.out.println(pDetails);
+        } else {
+            Assert.fail();
+        }
+    }
+
+    //Claims details of client displays by clicking on policy tab on view client page
+
+    @When("User clicks on claim tab on view client page")
+    public void user_clicks_on_claim_tab_on_view_client_page() {
+        clientPage.clickOnClaimIcon();
+    }
+
+    @Then("Claim details should display on view client page")
+    public void claim_details_should_display_on_view_client_page() {
+        String cDetails = clientPage.verifyClaimDetails();
+        if (cDetails.length() > 0) {
+            System.out.println(cDetails);
+        } else {
+            Assert.fail();
+        }
+    }
+
+    //Contacts details of client displays by clicking on contact tab on view client page
+
+    @When("User clicks on contact tab on view client page")
+    public void user_clicks_on_contact_tab_on_view_client_page() {
+        clientPage.clickOnContactIcon();
+    }
+
+    @Then("Contact details should display on view client page")
+    public void contact_details_should_display_on_view_client_page() {
+        String cDetails = clientPage.verifyContactDetails();
+        if (cDetails.length() > 0) {
+            System.out.println(cDetails);
+        } else {
+            Assert.fail();
+        }
+    }
+
+    //Notes details of client displays by clicking on notes tab on view client page
+
+    @When("User clicks on notes tab on view client page")
+    public void user_clicks_on_notes_tab_on_view_client_page() {
+        clientPage.clickOnNotesIcon();
+    }
+
+    @Then("Notes details should display on view client page")
+    public void notes_details_should_display_on_view_client_page() {
+        String nDetails = clientPage.verifyNotesDetails();
+        if (nDetails.length() > 0) {
+            System.out.println(nDetails);
+        } else {
+            Assert.fail();
+        }
+    }
+
+    //Task details of client displays by clicking on task tab on view client page
+
+    @When("User clicks on task tab on view client page")
+    public void user_clicks_on_task_tab_on_view_client_page() {
+        clientPage.clickOnTaskIcon();
+    }
+
+    @Then("Task details should display on view client page")
+    public void task_details_should_display_on_view_client_page() {
+        String tDetails = clientPage.verifyTaskDetails();
+        if (tDetails.length() > 0) {
+            System.out.println(tDetails);
+        } else {
+            Assert.fail();
+        }
+    }
+
     //Filter Client on base of active dropdown options
 
     @When("User selects appropriate option from Active dropdown on manage client page")
@@ -87,7 +216,7 @@ public class ClientPageSteps {
 
     @When("User clicks on client code on manage client page to add quote")
     public void user_clicks_on_client_code_on_manage_client_page_to_add_quote() {
-        clientNumber= clientPage.clickClientCodeToGetClientNumber();
+        clientNumber = clientPage.clickClientCodeToGetClientNumber();
 
     }
 
@@ -99,11 +228,9 @@ public class ClientPageSteps {
     @Then("Add quote page displays with same client code")
     public void add_quote_page_displays_with_same_client_code() {
         String clientId = clientPage.verifyExistingClientOnAddQuote();
-        if(clientId.equals(clientNumber))
-        {
+        if (clientId.equals(clientNumber)) {
             System.out.println("Add quote page displays with Same client details ");
-        }
-        else {
+        } else {
             System.out.println("Add quote page displays with different client details ");
         }
     }

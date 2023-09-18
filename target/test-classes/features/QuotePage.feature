@@ -13,7 +13,7 @@ Feature: Verify Quote Module Features
   Scenario:To verify dates under Quote date and Expire date columns displays in dd-mm-yyyy format
     Then User will able to see all data under quote date and expire date column displays with dd-mm-yyyy format
 
-  @Sanity
+
   Scenario: One can redirect to add quote page by clicking add quote button on top right corner of manage quote
     When User clicks add quote button on manage quote page
     Then User will able to see add quote page with data
@@ -32,10 +32,10 @@ Feature: Verify Quote Module Features
     When User clicks on add quote button
     Then On add quote page product dropdown will appear with desired list
 
-  @Sanity
-  Scenario: Respected quote information page will be displayed upon clicking quote number on manage quote page
-    When User clicks on quote number on manage quote page
-    Then Quote Information page displays with details
+#  @Sanity
+#  Scenario: Respected quote information page will be displayed upon clicking quote number on manage quote page
+#    When User clicks on quote number on manage quote page
+#    Then Quote Information page displays with details
 
 #  @Sanity (Do not use this one for uk1)
 #  Scenario: Items on manage quote page displays upon item select from quote status dropdown
@@ -48,13 +48,25 @@ Feature: Verify Quote Module Features
     And User clicks on search button on manage quote page
     Then Appropriate list of quote will display
 
+  @Sanity
+  Scenario: Fetch list of quote based on option from Is referred dropdown on manage quote page
+    When User selects appropriate option from Is referred dropdown on manage quote page
+    And User clicks on search button on manage quote page
+    Then Appropriate list of quote will display upon drop down option
+
+
+  Scenario: Fetch list of quote based on option from division dropdown on manage quote page
+    When User selects appropriate option from division dropdown on manage quote page
+    And User clicks on search button on manage quote page
+    Then Appropriate list of quote will display upon division drop down option
+#
 #  @Stage
 #  Scenario:Fetch quotation based on quote number on manage quote page
 #    When User enters quote number inside search box on manage quote page
 #    And User clicks on search button on manage quote page
 #    Then Appropriate quote information displays on manage quote page
 
-  @Sanity
+
   Scenario:Verify include payment feature of quote module
     When User selects include payment only quotes checkbox
     And User clicks on search button on manage quote page
@@ -62,9 +74,7 @@ Feature: Verify Quote Module Features
 
 #  @Stage
 #  Scenario: Edit quote details and verifies the same
-#    When User enters quote number inside search box on manage quote page
-#    And User clicks on search button on manage quote page
-#    And User selects edit quote option from cog icon on quote information page
+#    When User selects edit quote option from cog icon on quote information page
 #    Then User can edit all required field on edit quote page
 
 

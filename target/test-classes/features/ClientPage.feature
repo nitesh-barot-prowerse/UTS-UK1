@@ -9,6 +9,51 @@ Feature: Verify Client Module Features
   Scenario:Ensure that the Manage Client page displays list of client data after clicking on client icon on left tool bar
     Then Manage client page displays with list of clients
 
+
+  Scenario: view client page should displays with all details for each client code link on manage client page
+    When User clicks on client code link  on manage client page
+    Then View client page displays with all details
+
+
+#  Scenario:Edit client page should display in editable format by clicking on edit client icon on cog dropdown menu on view client page
+#    When User clicks on edit client icon on cog dropdown menu on view client page
+#    Then Edit client page displays in editable format
+
+  @Sanity
+  Scenario:Add quote page should display in editable format by clicking on add quote icon on cog dropdown menu on view client page
+    When User clicks on add quote icon on cog dropdown menu on manage client page
+    Then Add quote page should display in editable format
+
+
+  Scenario: Policies details of client displays by clicking on policy tab on view client page
+    When User clicks on client code on manage client page
+    And User clicks on policy tab on view client page
+    Then Policies details should display on view client page
+
+
+  Scenario: Claims details of client displays by clicking on claim tab on view client page
+    When User clicks on client code on manage client page
+    And User clicks on claim tab on view client page
+    Then Claim details should display on view client page
+
+
+  Scenario: Contacts details of client displays by clicking on contact tab on view client page
+    When User clicks on client code on manage client page
+    And User clicks on contact tab on view client page
+    Then Contact details should display on view client page
+
+
+  Scenario: Notes details of client displays by clicking on notes tab on view client page
+    When User clicks on client code on manage client page
+    And User clicks on notes tab on view client page
+    Then Notes details should display on view client page
+
+
+  Scenario: Task details of client displays by clicking on task tab on view client page
+    When User clicks on client code on manage client page
+    And User clicks on task tab on view client page
+    Then Task details should display on view client page
+
 #  @Stage
 #  Scenario: To add and verify new client details inside client client module
 #    When User clicks on add client icon on manage client page
