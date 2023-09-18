@@ -19,10 +19,10 @@ public class DriverFactory {
         System.out.println("The name of the browser is " + browser);
 
         if (browser.equals("chrome")) {
-            ChromeOptions options = new ChromeOptions();
-            options.addArguments("--headless", "--window-size=1920,1200");
+            //ChromeOptions options = new ChromeOptions();
+            //options.addArguments("--headless", "--window-size=1920,1200");
 
-            WebDriver driver1=new ChromeDriver(options);
+            WebDriver driver1=new ChromeDriver();
             tlLocal.set(driver1);
 
 
