@@ -630,7 +630,7 @@ public class AccountPage {
     }
 
     public void clickOnBankIcon() {
-        WebDriverWait cWait = new WebDriverWait(driver, 10);
+        WebDriverWait cWait = new WebDriverWait(driver, Duration.ofSeconds(10));
         List<WebElement> totalColumn = cWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@class='ibox-content']/div/div/a")));
         for (WebElement cLE : totalColumn) {
             cLE.click();
@@ -655,7 +655,7 @@ public class AccountPage {
     }
 
     public String verifyAccountNumber() {
-        WebDriverWait cWait = new WebDriverWait(driver, 10);
+        WebDriverWait cWait = new WebDriverWait(driver, Duration.ofSeconds(10));
         List<WebElement> accountNumber = cWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@id='gridBankList']/table/tbody/tr/td[4]")));
         String account = " ";
         for (WebElement cLE : accountNumber) {
@@ -671,7 +671,7 @@ public class AccountPage {
     }
 
     public String verifyClientName() {
-        WebDriverWait cWait = new WebDriverWait(driver, 10);
+        WebDriverWait cWait = new WebDriverWait(driver, Duration.ofSeconds(10));
         List<WebElement> clientName = cWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@id='gridBankList']/table/tbody/tr/td[3]")));
         String name = " ";
         for (WebElement cLE : clientName) {
@@ -687,7 +687,7 @@ public class AccountPage {
     //Bank Information page displays with details after clicking on bank code link on manage bank details
 
     public void clickOnBankCode() {
-        WebDriverWait cWait = new WebDriverWait(driver, 10);
+        WebDriverWait cWait = new WebDriverWait(driver, Duration.ofSeconds(10));
         List<WebElement> bankCode = cWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@id='gridBankList']/table/tbody/tr/td[2]")));
         for (WebElement cLE : bankCode) {
             cLE.click();
@@ -820,7 +820,7 @@ public class AccountPage {
     }
 
     public String verifyPolicyReviewData() {
-        WebDriverWait cWait = new WebDriverWait(driver, 10);
+        WebDriverWait cWait = new WebDriverWait(driver, Duration.ofSeconds(10));
         List<WebElement> PolicyReviewDetails = cWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@id='divLoadRenewalList']/div/table/tbody/tr")));
         String details = " ";
         for (WebElement cLE : PolicyReviewDetails) {
@@ -873,7 +873,7 @@ public class AccountPage {
     }
 
     public String verifyPolicyCreditCardPaymentData() {
-        WebDriverWait cWait = new WebDriverWait(driver, 10);
+        WebDriverWait cWait = new WebDriverWait(driver, Duration.ofSeconds(10));
         List<WebElement> PolicyCreditCardPaymentDetails = cWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@id='gridPolicyDueInvoiceGrid']/table/tbody/tr")));
         String details = " ";
         for (WebElement cLE : PolicyCreditCardPaymentDetails) {

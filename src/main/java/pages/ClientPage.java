@@ -9,7 +9,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class ClientPage {
     private WebDriver driver;
@@ -35,6 +37,34 @@ public class ClientPage {
     private By addQuoteForClient = By.cssSelector("a[id='btnAddClientView']");
 
     private By existingClientId = By.xpath("//div[@id='loadpartialview']/div/div/div[2]/div/div");
+
+    //Edit client page
+
+    private By cogIcon = By.xpath("//div[@id='gridName']/table/tbody/tr[1]/td[7]/ul/li/a");
+
+    private By editClientIcon = By.xpath("//div[@id='gridName']/table/tbody/tr[1]/td[7]/ul/li/ul/li[1]");
+
+    //Tab  details on view client page
+
+    private By policyIcon = By.xpath("//div[@class='ibox-content project-content']/div/ul/li[1]/a");
+
+    private By policyDetails = By.xpath("//div[@id='gridClientPolicyList']/table/tbody/tr");
+
+    private By claimIcon = By.xpath("//div[@class='ibox-content project-content']/div/ul/li[2]/a");
+
+    private By claimDetails = By.xpath("//div[@id='gridNameClientClaim']/table/tbody/tr");
+
+    private By contactIcon = By.xpath("//div[@class='ibox-content project-content']/div/ul/li[3]/a");
+
+    private By contactDetails = By.xpath("//div[@id='gridName']/table/tbody/tr");
+
+    private By noteIcon = By.xpath("//div[@class='ibox-content project-content']/div/ul/li[4]/a");
+
+    private By noteDetailsOnViewClient = By.xpath("//div[@id='gridClientNoteName']/table/tbody/tr");
+
+    private By taskIcon = By.xpath("//div[@class='ibox-content project-content']/div/ul/li[5]/a");
+
+    private By taskDetailsOnViewClient = By.xpath("//div[@id='gridClientTaskName']/table/tbody/tr");
 
     //Add client scenario
     private By addClientButton = By.xpath("//div[@class=' tooltip-demo pull-right']/a[2]");
@@ -69,6 +99,33 @@ public class ClientPage {
 
     private By displayMessageOfViewClientPage = By.xpath("//div[@class='row wrapper border-bottom white-bg page-heading']/div/h2");
 
+    //Add quote on client
+
+    private By addQuoteIcon = By.xpath("//div[@id='gridName']/table/tbody/tr[1]/td[7]/ul/li/ul/li[2]");
+    private By productDropdown = By.xpath("//div[@class='ibox-content']/div/div/div[4]/div/div/span");
+
+    private By optionOfProductDropDown = By.xpath("//ul[@id='PrimaryProductId_listbox']/li[2]");
+
+    private By AddressOfClient = By.cssSelector("input[id='Address1']");
+
+    private By optionOfAddress = By.xpath("//div[@id='cc_c2a']/ul/li[3]");
+
+    private By radioButton = By.cssSelector("input[id='Question_234_278']");
+
+    private By speciesDropDown = By.xpath("//div[@id='Div_138']/div/div/span");
+
+    private By optionOfSpeciesDD = By.xpath("//ul[@id='Question_138_listbox']/li[3]");
+
+    private By nameOfSpecies = By.cssSelector("input[id='Question_139']");
+
+    private By genderDropDownAddQuote = By.xpath("//div[@id='Div_140']/div/div/span");
+
+    private By optionOfGenderDD = By.xpath("//ul[@id='Question_140_listbox']/li[3]");
+
+    private By dateOfBirth = By.cssSelector("input[id='Question_141']");
+
+    private By priceOfSpecies = By.cssSelector("input[id='Question_142']");
+
     //Add contact details of client
 
     private By settingDropDown = By.xpath("//div[@class='dropdown']/a");
@@ -91,76 +148,76 @@ public class ClientPage {
 
     //Add notes details of client
 
-    private By addNotesOptionOfDD=By.xpath("//ul[@class='dropdown-menu']/li[6]/a");
+    private By addNotesOptionOfDD = By.xpath("//ul[@class='dropdown-menu']/li[6]/a");
 
-    private By titleOfNote=By.cssSelector("input[id='Title']");
+    private By titleOfNote = By.cssSelector("input[id='Title']");
 
-    private By descriptionOFNote=By.cssSelector("textarea[id='Description']");
+    private By descriptionOFNote = By.cssSelector("textarea[id='Description']");
 
-    private By createButtonOfWindow=By.xpath("//button[@type='submit' and @title='Create']");
+    private By createButtonOfWindow = By.xpath("//button[@type='submit' and @title='Create']");
 
-    private By noteTabOFMenu=By.xpath("//div[@class='project-tabs user-profile dsh-tab']/ul/li[4]/a");
+    private By noteTabOFMenu = By.xpath("//div[@class='project-tabs user-profile dsh-tab']/ul/li[4]/a");
 
-    private By noteDetails=By.xpath("//div[@id='gridClientNoteName']/table/tbody/tr[1]");
+    private By noteDetails = By.xpath("//div[@id='gridClientNoteName']/table/tbody/tr[1]");
 
     //Add task details of client
 
-    private By addTaskOptionOfDD=By.xpath("//ul[@class='dropdown-menu']/li[7]/a");
+    private By addTaskOptionOfDD = By.xpath("//ul[@class='dropdown-menu']/li[7]/a");
 
-    private By titleOfTask=By.cssSelector("input[id='Title']");
+    private By titleOfTask = By.cssSelector("input[id='Title']");
 
-    private By statusDropDownOfTask=By.xpath("//div[@class='ibox-content']/div[1]/div[1]/div[3]/div/div/div/div/span");
+    private By statusDropDownOfTask = By.xpath("//div[@class='ibox-content']/div[1]/div[1]/div[3]/div/div/div/div/span");
 
-    private By optionFromStatusDD=By.xpath("//ul[@id='TaskStatusId_listbox']/li[2]/span/span");
+    private By optionFromStatusDD = By.xpath("//ul[@id='TaskStatusId_listbox']/li[2]/span/span");
 
-    private By priorityDropDown=By.xpath("//div[@class='ibox-content']/div[1]/div[1]/div[4]/div/div/div/span");
+    private By priorityDropDown = By.xpath("//div[@class='ibox-content']/div[1]/div[1]/div[4]/div/div/div/span");
 
-    private By optionFromPriority=By.xpath("//ul[@id='TaskPriorityId_listbox']/li[4]");
+    private By optionFromPriority = By.xpath("//ul[@id='TaskPriorityId_listbox']/li[4]");
 
-    private By typeDropDown=By.xpath("//div[@class='ibox-content']/div[1]/div[1]/div[5]/div/div/div/span");
+    private By typeDropDown = By.xpath("//div[@class='ibox-content']/div[1]/div[1]/div[5]/div/div/div/span");
 
-    private By optionFromTypeDD=By.xpath("//ul[@id='TaskTypeId_listbox']/li[2]");
+    private By optionFromTypeDD = By.xpath("//ul[@id='TaskTypeId_listbox']/li[2]");
 
-    private By endDate=By.xpath("//input[@id='EndDate']");
+    private By endDate = By.xpath("//input[@id='EndDate']");
 
-    private By createButtonOfTask=By.xpath("//button[@type='submit' and @value='Create']");
+    private By createButtonOfTask = By.xpath("//button[@type='submit' and @value='Create']");
 
-    private By taskTabOFMenu=By.xpath("//div[@class='project-tabs user-profile dsh-tab']/ul/li[5]/a");
+    private By taskTabOFMenu = By.xpath("//div[@class='project-tabs user-profile dsh-tab']/ul/li[5]/a");
 
-    private By taskDetails=By.xpath("//div[@id='gridClientTaskName']/table/tbody/tr[1]");
+    private By taskDetails = By.xpath("//div[@id='gridClientTaskName']/table/tbody/tr[1]");
 
     //Edit client test case
 
-    private By editClientOptionsFromDD=By.xpath("//ul[@class='dropdown-menu']/li[1]");
+    private By editClientOptionsFromDD = By.xpath("//ul[@class='dropdown-menu']/li[1]");
 
-    private By clientFirstName=By.cssSelector("input[id='FirstName']");
+    private By clientFirstName = By.cssSelector("input[id='FirstName']");
 
-    private By clientLastName=By.cssSelector("input[id='LastName']");
+    private By clientLastName = By.cssSelector("input[id='LastName']");
 
-    private By clientBirthDate=By.cssSelector("input[id='BirthDate']");
+    private By clientBirthDate = By.cssSelector("input[id='BirthDate']");
 
-    private By clientPostAddressCode=By.cssSelector("input[id='Address1']");
+    private By clientPostAddressCode = By.cssSelector("input[id='Address1']");
 
-    private By clientAddressFromDD=By.xpath("//div[@id='cc_c2a']/ul/li[3]");
+    private By clientAddressFromDD = By.xpath("//div[@id='cc_c2a']/ul/li[3]");
 
-    private By clientEmail=By.cssSelector("input[id='Email']");
+    private By clientEmail = By.cssSelector("input[id='Email']");
 
-    private By clientContact=By.cssSelector("input[id='PrimaryContactNumber']");
+    private By clientContact = By.cssSelector("input[id='PrimaryContactNumber']");
 
-    private By saveButton=By.xpath("//button[@type='button' and @value='Create']");
+    // private By saveButton = By.xpath("//button[@type='button' and @value='Create']");
 
 
     //Add Primary contact for client on production
 
-    private By settingIconOnProd=By.xpath("//div[@id='gridName']/table/tbody/tr[1]/td[7]/ul/li/a");
+    private By settingIconOnProd = By.xpath("//div[@id='gridName']/table/tbody/tr[1]/td[7]/ul/li/a");
 
-    private By primaryContactIconFromDD=By.xpath("//div[@id='gridName']/table/tbody/tr[1]/td[7]/ul/li/ul/li[5]/a");
+    private By primaryContactIconFromDD = By.xpath("//div[@id='gridName']/table/tbody/tr[1]/td[7]/ul/li/ul/li[5]/a");
 
-    private By addNotesFromDDForProd= By.xpath("//div[@id='gridName']/table/tbody/tr[1]/td[7]/ul/li/ul/li[6]/a");
+    private By addNotesFromDDForProd = By.xpath("//div[@id='gridName']/table/tbody/tr[1]/td[7]/ul/li/ul/li[6]/a");
 
-    private By addTaskFromDDForProd=By.xpath("//div[@id='gridName']/table/tbody/tr[1]/td[7]/ul/li/ul/li[7]/a");
+    private By addTaskFromDDForProd = By.xpath("//div[@id='gridName']/table/tbody/tr[1]/td[7]/ul/li/ul/li[7]/a");
 
-    private By editClientFromDDForProd=By.xpath("//div[@id='gridName']/table/tbody/tr[1]/td[7]/ul/li/ul/li[1]/a");
+    private By editClientFromDDForProd = By.xpath("//div[@id='gridName']/table/tbody/tr[1]/td[7]/ul/li/ul/li[1]/a");
 
 
     public String verifyClientManage() {
@@ -174,7 +231,7 @@ public class ClientPage {
     }
 
     public String fetchAndDisplayData() {
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         List<WebElement> totalRow = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@id='gridName']/table/tbody/tr")));
         String array = " ";
         for (WebElement rEle : totalRow) {
@@ -203,7 +260,7 @@ public class ClientPage {
     }
 
     public String verifyClient() {
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         List<WebElement> clientInfo = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@id='gridName']/table/tbody/tr/td[2]")));
         String clientCode = " ";
         for (WebElement client : clientInfo) {
@@ -224,7 +281,7 @@ public class ClientPage {
     }
 
     public void clickClientCode() {
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         List<WebElement> clientInfo = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@id='gridName']/table/tbody/tr/td[2]")));
         for (WebElement client : clientInfo) {
             client.click();
@@ -246,12 +303,208 @@ public class ClientPage {
 
         return Status;
     }
-//To check whether add quote page is displays for same user by clicking on add button on view client page
+
+    //view client page should displays with all details for each client code link on manage client page
+
+    public String clickOnClientCodeOnManageClient() {
+        WebDriverWait cWait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        List<WebElement> totalColumn = cWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@id='gridName']/table/tbody/tr/td[2]/a")));
+
+        String displayMessage = " ";
+        for (WebElement cEle : totalColumn) {
+            cEle.click();
+
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+            driver.switchTo().window(tabs2.get(1));
+            System.out.println(driver.getCurrentUrl());
+            displayMessage = displayMessage + driver.findElement(displayedMessage).getText();
+
+            driver.close();
+            driver.switchTo().window(tabs2.get(0));
+            //break;
+
+        }
+        return displayMessage;
+
+    }
+
+    //Edit client page should display in editable format by clicking on edit client icon on cog dropdown menu on view client page
+
+    public void clickOnEditClientIcon() {
+
+        Actions actions = new Actions(driver);
+        actions.moveToElement(driver.findElement(cogIcon)).perform();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        driver.findElement(editClientIcon).click();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+
+    }
+
+    public void verifyEditClientPage() {
+        driver.findElement(clientFirstName).clear();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        driver.findElement(clientFirstName).sendKeys("Nitesh");
+        driver.findElement(clientLastName).clear();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        driver.findElement(clientLastName).sendKeys("Barot");
+        driver.findElement(clientBirthDate).clear();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        driver.findElement(clientBirthDate).sendKeys("12/09/1980");
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+       /* new WebDriverWait(driver,30).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@id='Address1']"))).clear();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        new WebDriverWait(driver,30).until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='Address1']"))).sendKeys("RM8 2TE");
+       // driver.findElement(clientPostAddressCode).sendKeys("RM8 2TE");
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        driver.findElement(clientAddressFromDD).click();*/
+
+
+        driver.findElement(clientEmail).clear();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        driver.findElement(clientEmail).sendKeys("nik@gmail.com");
+
+        driver.findElement(clientContact).clear();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        driver.findElement(clientContact).sendKeys("07459170022");
+
+    }
+
+    //Add quote page should display in editable format by clicking on add quote icon on cog dropdown menu on view client page
+
+    public void clickOnAddQuoteIcon() {
+        Actions actions = new Actions(driver);
+        actions.moveToElement(driver.findElement(cogIcon)).perform();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        driver.findElement(addQuoteIcon).click();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void verifyAddQuotePage() {
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.findElement(productDropdown).click();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        driver.findElement(optionOfProductDropDown).click();
+       /* JavascriptExecutor js=(JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,10)", "");
+        driver.findElement(AddressOfClient).clear();
+        driver.findElement(AddressOfClient).sendKeys("RM8 2TE");
+        driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+        driver.findElement(optionOfAddress).click();
+        JavascriptExecutor js1=(JavascriptExecutor) driver;
+        js1.executeScript("window.scrollBy(0,-150)", "");*/
+        // driver.findElement(radioButton).click();
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        driver.findElement(speciesDropDown).click();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        driver.findElement(optionOfSpeciesDD).click();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        driver.findElement(nameOfSpecies).sendKeys("Test Data");
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        driver.findElement(genderDropDownAddQuote).click();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        driver.findElement(optionOfGenderDD).click();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        driver.findElement(dateOfBirth).sendKeys("12.09.2020");
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        ((JavascriptExecutor) driver).executeScript("document.getElementById('Question_142').style.display='block';");
+        driver.findElement(priceOfSpecies).sendKeys("1500");
+
+
+    }
+
+    //To check whether add quote page is displays for same user by clicking on add button on view client page
     public String clickClientCodeToGetClientNumber() {
 
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement clientInfo = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@id='gridName']/table/tbody/tr[1]/td[2]")));
-        String clientNumber =clientInfo.getText();
+        String clientNumber = clientInfo.getText();
         System.out.println(clientNumber);
         clientInfo.click();
         try {
@@ -275,6 +528,98 @@ public class ClientPage {
 
     public String verifyExistingClientOnAddQuote() {
         return driver.findElement(existingClientId).getText();
+    }
+
+    //Policies details of client displays by clicking on policy tab on view client page
+    public void clickOnPolicyIcon() {
+        //WebElement element=driver.findElement(By.xpath("//div[@class='ibox-content project-content']/div/ul/li[1]"));
+        //JavascriptExecutor js = (JavascriptExecutor) driver;
+        //js.executeScript("arguments[0].click();", element);
+       // driver.findElement(policyIcon).click();
+        driver.findElement(By.xpath("//a[contains(.,'Policies')]")).click();
+        //WebDriverWait wait=new WebDriverWait(driver,10);
+       // WebElement element=wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='ibox-content project-content']/div/ul/li[1]")));
+       // element.click();
+
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    public String verifyPolicyDetails() {
+        return driver.findElement(policyDetails).getText();
+
+    }
+
+    //Claims details of client displays by clicking on policy tab on view client page
+
+    public void clickOnClaimIcon() {
+        driver.findElement(claimIcon).click();
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    public String verifyClaimDetails() {
+        return driver.findElement(claimDetails).getText();
+
+    }
+
+    //Contacts details of client displays by clicking on contact tab on view client page
+
+    public void clickOnContactIcon() {
+        driver.findElement(contactIcon).click();
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    public String verifyContactDetails() {
+        return driver.findElement(contactDetails).getText();
+
+    }
+
+    //Notes details of client displays by clicking on notes tab on view client page
+
+    public void clickOnNotesIcon() {
+        driver.findElement(noteIcon).click();
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    public String verifyNotesDetails() {
+        return driver.findElement(noteDetails).getText();
+
+    }
+
+    //Task details of client displays by clicking on task tab on view client page
+
+    public void clickOnTaskIcon() {
+        driver.findElement(taskIcon).click();
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    public String verifyTaskDetails() {
+        return driver.findElement(taskDetails).getText();
+
     }
 
     //Add client scenario
@@ -351,9 +696,9 @@ public class ClientPage {
 
 //Add contact details of client
 
-    public void openViewClient(){
-        WebDriverWait wait=new WebDriverWait(driver,10);
-        WebElement element=wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@id='gridName']/table/tbody/tr[1]/td[2]")));
+    public void openViewClient() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@id='gridName']/table/tbody/tr[1]/td[2]")));
         element.click();
         try {
             Thread.sleep(2000);
@@ -423,7 +768,7 @@ public class ClientPage {
 
     //Add notes information for client
 
-    public void selectAddNotesOfClient(){
+    public void selectAddNotesOfClient() {
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
@@ -442,7 +787,7 @@ public class ClientPage {
 
     }
 
-    public void enterNotesDetails(){
+    public void enterNotesDetails() {
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
@@ -456,7 +801,7 @@ public class ClientPage {
 
     }
 
-    public String verifyGeneratedNotesDetails(){
+    public String verifyGeneratedNotesDetails() {
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
@@ -567,7 +912,7 @@ public class ClientPage {
 
     }
 
-    public void editClientData(){
+    public void editClientData() {
         driver.findElement(clientFirstName).clear();
         try {
             Thread.sleep(1000);
@@ -619,10 +964,10 @@ public class ClientPage {
             throw new RuntimeException(e);
         }
         driver.findElement(clientContact).sendKeys("07459170022");
-        driver.findElement(saveButton).click();
+        // driver.findElement(saveButton).click();
     }
 
-    public String verifyUpdatedClient(){
+    public String verifyUpdatedClient() {
         return driver.findElement(By.cssSelector("ul[class='iconlist']>li")).getText();
     }
 
@@ -646,7 +991,7 @@ public class ClientPage {
         }
     }
 
-    public void SelectPrimaryContactFromSetting(){
+    public void SelectPrimaryContactFromSetting() {
 
         Actions actions = new Actions(driver);
         actions.moveToElement(driver.findElement(By.xpath("//div[@id='gridName']/table/tbody/tr[1]/td[7]/ul/li/a"))).perform();
@@ -660,7 +1005,7 @@ public class ClientPage {
     }
 
     public void clickONClientCode() {
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         List<WebElement> clientInfo = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@id='gridName']/table/tbody/tr[1]/td[2]")));
         for (WebElement client : clientInfo) {
             client.click();
@@ -676,7 +1021,7 @@ public class ClientPage {
 
     //Add client note feature for production
 
-    public void SelectAddNotesFromSetting(){
+    public void SelectAddNotesFromSetting() {
 
         Actions actions = new Actions(driver);
         actions.moveToElement(driver.findElement(By.xpath("//div[@id='gridName']/table/tbody/tr[1]/td[7]/ul/li/a"))).perform();
@@ -691,7 +1036,7 @@ public class ClientPage {
 
     //Add Task for client on Production
 
-    public void SelectAddTaskFromSetting(){
+    public void SelectAddTaskFromSetting() {
 
         Actions actions = new Actions(driver);
         actions.moveToElement(driver.findElement(By.xpath("//div[@id='gridName']/table/tbody/tr[1]/td[7]/ul/li/a"))).perform();
@@ -706,7 +1051,7 @@ public class ClientPage {
 
     //verify edit client feature on production
 
-    public void SelectEditClientFromSetting(){
+    public void SelectEditClientFromSetting() {
 
         Actions actions = new Actions(driver);
         actions.moveToElement(driver.findElement(By.xpath("//div[@id='gridName']/table/tbody/tr[1]/td[7]/ul/li/a"))).perform();
@@ -718,9 +1063,6 @@ public class ClientPage {
         }
 
     }
-
-
-
 
 
 }

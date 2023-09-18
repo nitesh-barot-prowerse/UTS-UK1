@@ -42,6 +42,17 @@ public class QuotePage {
 
     private By optionsFromProductDD = By.xpath("//ul[@id='ProductId_listbox']/li[3]");
 
+    private By isReferredDropdown = By.xpath("//div[@class='ibox-content-search m-b-sm']/div[1]/div[1]/div[3]/div/span");
+
+    private By optionsFromIsReferredDD = By.xpath("//ul[@id='IsReferRequired_listbox']/li[2]");
+
+    private By divisionDropdown = By.xpath("//div[@class='ibox-content-search m-b-sm']/div[1]/div[2]/div[4]/div/span");
+
+    private By optionsFromDivisionDD = By.xpath("//ul[@id='DivisionId_listbox']/li[2]");
+
+
+    private By detailsOfQuotes=By.xpath("//div[@id='gridName']/table/tbody/tr");
+
     private By searchButton = By.cssSelector("button[id='SearchGrid']");
 
     //Fetch quote on manage quote page based on quote number
@@ -58,41 +69,31 @@ public class QuotePage {
 
     private By selectEditQuoteIcon = By.xpath("//div[@id='gridName']/table/tbody/tr[1]/td[18]/ul/li[1]/ul/li[1]/a");
 
-    // private By enterPostCodeInAddressDropDown = By.cssSelector("input[id='Address1']");
+    private By enterPostCodeInAddressDropDown = By.cssSelector("input[id='Address1']");
 
-    // private By selectPostCodeFromDD = By.xpath("//div[@id='cc_c2a']/ul/li[3]");
+    private By selectPostCodeFromDD = By.xpath("//div[@id='cc_c2a']/ul/li[3]");
 
-    private By hearAboutUsDropDown = By.xpath("//div[@id='loadpartialview']/div[2]/div/div[17]/div/div/span/span");
+    private By hearAboutUsDropDown = By.cssSelector("span[class='k-dropdown-wrap k-state-default k-state-hover']");
 
-    private By selectOptionFromHearAboutUsDD = By.xpath("//ul[@id='HearAboutUs_listbox']/li[5]");
+    private By selectOptionFromHearAboutUsDD = By.xpath("//ul[@id='HearAboutUs_listbox']/li[3]");
 
-    private By petNameInput = By.cssSelector("input[id='Question_151']");
+    private By petNameInput = By.cssSelector("input[id='Question_139']");
 
-    private By petBreedDropDown = By.xpath("//div[@id='Div_152']/div/div/span/span");
+    private By petBreedDropDown = By.xpath("//div[@id='Div_138']/div/div/span/span");
 
-    private By optionFromPetBreedDD = By.xpath("//ul[@id='Question_152_listbox']/li[3]");
+    private By optionFromPetBreedDD = By.xpath("//ul[@id='Question_138_listbox']/li[3]");
 
-    private By petBreedColorDropDown = By.xpath("//div[@id='Div_153']/div/div/span/span");
+    private By petBreedGenderDropDown = By.xpath("//div[@id='Div_140']/div/div/span/span");
 
-    private By optionFromPetBreedColorDD = By.xpath("//ul[@id='Question_153_listbox']/li[3]");
+    private By optionFromPetBreedGenderDD = By.xpath("//ul[@id='Question_140_listbox']/li[3]");
 
-    private By petBreedAgeDropDown = By.xpath("//div[@id='Div_154']/div/div/span/span");
+    private By petDateOfBirth = By.xpath("//input[@id='Question_141']");
 
-    private By optionFromPetBreedAgeDD = By.xpath("//ul[@id='Question_154_listbox']/li[3]");
+    private By petPurchasePrice = By.xpath("//div[@id='Div_142']/div/div/span/span/input[@id='Question_142']");
 
-    private By petBreedSexDropDown = By.xpath("//div[@id='Div_155']/div/div/span/span");
+    private By petAdminFees = By.cssSelector("input[id='Question_231']");
 
-    private By optionFromPetBreedSexDD = By.xpath("//ul[@id='Question_155_listbox']/li[4]");
-
-    private By petBreedHeightDropDown = By.xpath("//div[@id='Div_156']/div/div/span/span");
-
-    private By optionFromPetBreedHeightDD = By.xpath("//ul[@id='Question_156_listbox']/li[4]");
-
-    private By petBreedOwnedDropDown = By.xpath("//div[@id='Div_158']/div/div/span/span");
-
-    private By optionFromPetBreedOwnedDD = By.xpath("//ul[@id='Question_158_listbox']/li[4]");
-
-    private By petPurchaseDate = By.xpath("//div[@id='Div_159']/div/div/span/span/input");
+    private By calculateButton = By.xpath("//button[@id='btnCalculate']");
 
 
     public String verifyManageQuotePage() {
@@ -106,7 +107,7 @@ public class QuotePage {
     }
 
     public String fetchAndDisplayedData() {
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         List<WebElement> totalRow = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@id='gridName']/table/tbody/tr")));
         String array = " ";
         for (WebElement rEle : totalRow) {
@@ -116,7 +117,7 @@ public class QuotePage {
     }
 
     public String verifyQuoteDateColumnForamt() {
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         List<WebElement> quoteDateColumn = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@id='gridName']/table/tbody[1]/tr/td[3]")));
         String date = "";
         for (WebElement quoteDate : quoteDateColumn) {
@@ -128,7 +129,7 @@ public class QuotePage {
     }
 
     public String verifyExpireDateColumnFormat() {
-        WebDriverWait eWait = new WebDriverWait(driver, 10);
+        WebDriverWait eWait = new WebDriverWait(driver, Duration.ofSeconds(10));
         List<WebElement> expireDateColumn = eWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@id='gridName']/table/tbody[1]/tr/td[4]")));
         String date = "";
         for (WebElement expireDate : expireDateColumn) {
@@ -165,7 +166,7 @@ public class QuotePage {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         List<WebElement> yearlyPremiumColum = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@id='gridName']/table/tbody[1]/tr/td[13]")));
         String yPremium = " ";
         for (WebElement amountP : yearlyPremiumColum) {
@@ -175,7 +176,7 @@ public class QuotePage {
     }
 
     public String verifyMonthlyPremiumColumn() {
-        WebDriverWait mWait = new WebDriverWait(driver, 10);
+        WebDriverWait mWait = new WebDriverWait(driver, Duration.ofSeconds(10));
         List<WebElement> monthlyPremiumColumn = mWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@id='gridName']/table/tbody[1]/tr/td[14]")));
         String yPremium = " ";
         for (WebElement amountP : monthlyPremiumColumn) {
@@ -196,7 +197,7 @@ public class QuotePage {
     }
 
     public String verifyDataOnMicrochipPage() {
-        WebDriverWait rWait = new WebDriverWait(driver, 10);
+        WebDriverWait rWait = new WebDriverWait(driver, Duration.ofSeconds(10));
         List<WebElement> totalRow = rWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@id='MicrochipFileUploadAuditGrid']/table/tbody/tr")));
         String data = " ";
         for (WebElement rEle : totalRow) {
@@ -217,7 +218,7 @@ public class QuotePage {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         List<WebElement> pList = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.cssSelector("ul[id='PrimaryProductId_listbox']>li")));
         System.out.println(pList.size());
 
@@ -231,7 +232,7 @@ public class QuotePage {
     }
 
     public String fetchDataOfQuoteInformation() {
-        WebDriverWait cWait = new WebDriverWait(driver, 10);
+        WebDriverWait cWait = new WebDriverWait(driver, Duration.ofSeconds(10));
         List<WebElement> totalColumn = cWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@id='gridName']/table/tbody[1]/tr/td[2]/a")));
         String displayMessage = " ";
         for (WebElement cEle : totalColumn) {
@@ -272,7 +273,7 @@ public class QuotePage {
     }
 
     public String fetchAndVerifyDataAgainstDropDown() {
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         List<WebElement> totalRow = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@id='gridName']/table/tbody/tr")));
         String array = " ";
         for (WebElement rEle : totalRow) {
@@ -309,9 +310,51 @@ public class QuotePage {
     }
 
     public List<WebElement> verifyListOfQuoteBasedOnProductDD() {
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         List<WebElement> listOfProduct = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@id='gridName']/table/tbody/tr")));
         return listOfProduct;
+
+    }
+    //Fetch list of quote based on option from Is referred dropdown on manage quote page
+
+    public void selectOptionFromIsReferredDropDown() {
+
+        driver.findElement(isReferredDropdown).click();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        driver.findElement(optionsFromIsReferredDD).click();
+
+    }
+
+
+
+    public String verifyListOfQuoteBasedOnIsReferredDD() {
+        return  driver.findElement(detailsOfQuotes).getText();
+
+    }
+
+
+    //Fetch list of quote based on option from division dropdown on manage quote page
+
+    public void selectOptionFromDivisionDropDown() {
+
+        driver.findElement(divisionDropdown).click();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        driver.findElement(optionsFromDivisionDD).click();
+
+    }
+
+
+
+    public String verifyListOfQuoteBasedOnDivisionDD() {
+        return  driver.findElement(detailsOfQuotes).getText();
 
     }
 
@@ -322,7 +365,7 @@ public class QuotePage {
     }
 
     public String verifyQuoteDetails() {
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement quoteInfo = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@id='gridName']/table/tbody/tr[1]")));
         return quoteInfo.getText();
     }
@@ -382,30 +425,41 @@ public class QuotePage {
 
     public void editQuoteDetails() {
         //Scroll up
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,50)", "");
-
-
-        WebElement hearAboutUsDropDown1 = driver.findElement(By.xpath("//div[@id='loadpartialview']/div[2]/div/div[17]/div/div/span/span"));
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", hearAboutUsDropDown1);
-        //driver.findElement(hearAboutUsDropDown).click();
+        //Scroll up
+        //JavascriptExecutor js = (JavascriptExecutor) driver;
+      //  js.executeScript("window.scrollBy(0,500)", "");
+        /*driver.findElement(enterPostCodeInAddressDropDown).clear();
+        driver.findElement(enterPostCodeInAddressDropDown).sendKeys("RM8 2TE");
         try {
+            Thread.sleep(2500);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        driver.findElement(selectPostCodeFromDD).click();*/
+
+        /*try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
 
-        WebElement hearAboutUsDropDownOption = driver.findElement(By.xpath("//ul[@id='HearAboutUs_listbox']/li[5]"));
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", hearAboutUsDropDownOption);
-        //driver.findElement(selectOptionFromHearAboutUsDD).click();
+        driver.findElement(hearAboutUsDropDown).click();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        driver.findElement(selectOptionFromHearAboutUsDD).click();
+        try {
+            Thread.sleep(1500);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }*/
+
 
         //Scroll up
-        JavascriptExecutor js1 = (JavascriptExecutor) driver;
-        js1.executeScript("window.scrollBy(0,-150)", "");
-
-        driver.findElement(petNameInput).clear();
-        driver.findElement(petNameInput).sendKeys("Test Test");
-
+      //  JavascriptExecutor js1 = (JavascriptExecutor) driver;
+        //js1.executeScript("window.scrollBy(0,-250)", "");
         driver.findElement(petBreedDropDown).click();
         try {
             Thread.sleep(1000);
@@ -413,46 +467,93 @@ public class QuotePage {
             throw new RuntimeException(e);
         }
         driver.findElement(optionFromPetBreedDD).click();
-
-        driver.findElement(petBreedColorDropDown).click();
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        driver.findElement(optionFromPetBreedColorDD).click();
 
-        driver.findElement(petBreedAgeDropDown).click();
+        driver.findElement(petNameInput).clear();
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        driver.findElement(optionFromPetBreedAgeDD).click();
+        driver.findElement(petNameInput).sendKeys("TestEditQuote");
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
 
-        driver.findElement(petBreedSexDropDown).click();
+        driver.findElement(petBreedGenderDropDown).click();
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        driver.findElement(optionFromPetBreedSexDD).click();
-
-        driver.findElement(petBreedHeightDropDown).click();
+        driver.findElement(optionFromPetBreedGenderDD).click();
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        driver.findElement(optionFromPetBreedHeightDD).click();
 
-        driver.findElement(petBreedOwnedDropDown).click();
+        driver.findElement(petDateOfBirth).clear();
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        driver.findElement(optionFromPetBreedOwnedDD).click();
+        driver.findElement(petDateOfBirth).sendKeys("02.08.2020");
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+
+        ((JavascriptExecutor) driver).executeScript("document.getElementById('Question_142').style.display='block';");
+        driver.findElement(petPurchasePrice).clear();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        ((JavascriptExecutor) driver).executeScript("document.getElementById('Question_142').style.display='block';");
+        driver.findElement(petPurchasePrice).sendKeys("500");
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+        ((JavascriptExecutor) driver).executeScript("document.getElementById('Question_231').style.display='block';");
+        driver.findElement(petAdminFees).clear();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        ((JavascriptExecutor) driver).executeScript("document.getElementById('Question_231').style.display='block';");
+        driver.findElement(petAdminFees).sendKeys("20");
+        try {
+            Thread.sleep(1500);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+        //driver.findElement(calculateButton).click();
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click()", driver.findElement(calculateButton));
+
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+         JavascriptExecutor js1 = (JavascriptExecutor) driver;
+        js1.executeScript("window.scrollBy(0,150)", "");
+
 
         //driver.findElement(petPurchaseDate).clear();
         //driver.findElement(petPurchaseDate).sendKeys("23/08/2022");

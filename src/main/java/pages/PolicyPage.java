@@ -158,7 +158,7 @@ public class PolicyPage {
     }
 
     public String fetchAndDisplayData() {
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         List<WebElement> totalRow = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@id='gridName']/table/tbody/tr")));
         String array = " ";
         for (WebElement rEle : totalRow) {
@@ -168,7 +168,7 @@ public class PolicyPage {
     }
 
     public String verifyDateFormatOfStartDate() {
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         List<WebElement> policyDateColumn = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@id='gridName']/table/tbody[1]/tr/td[13]")));
         String dateArray = " ";
         for (WebElement startDate : policyDateColumn) {
@@ -179,7 +179,7 @@ public class PolicyPage {
     }
 
     public String verfiyDateFormatOfExpireDate() {
-        WebDriverWait eWait = new WebDriverWait(driver, 10);
+        WebDriverWait eWait = new WebDriverWait(driver, Duration.ofSeconds(10));
         List<WebElement> endDateColumn = eWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@id='gridName']/table/tbody[1]/tr/td[14]")));
         String dateArray = " ";
         for (WebElement endDate : endDateColumn) {
@@ -190,7 +190,7 @@ public class PolicyPage {
     }
 
     public String clickOnPolicyNumberLink() {
-        WebDriverWait cWait = new WebDriverWait(driver, 10);
+        WebDriverWait cWait = new WebDriverWait(driver, Duration.ofSeconds(10));
         List<WebElement> totalColumn = cWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@id='gridName']/table/tbody[1]/tr/td[4]/a")));
         String displayMessage=" ";
         for (WebElement cEle : totalColumn) {
@@ -220,7 +220,7 @@ public class PolicyPage {
     }
     public void clickPolicyPageToDownloadFile()
     {
-        WebDriverWait cWait = new WebDriverWait(driver, 10);
+        WebDriverWait cWait = new WebDriverWait(driver, Duration.ofSeconds(10));
         List<WebElement> totalColumn = cWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@id='gridName']/table/tbody[1]/tr[1]/td[4]/a")));
 
         for (WebElement cEle : totalColumn) {
@@ -265,7 +265,7 @@ public class PolicyPage {
             throw new RuntimeException(e);
         }
 
-        WebDriverWait dWait = new WebDriverWait(driver, 10);
+        WebDriverWait dWait = new WebDriverWait(driver, Duration.ofSeconds(10));
         List<WebElement> totalDownLoadSymbol = dWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@id='gridPolicyLetterList']/table/tbody/tr/td[14]/div/a[1]")));
         int dSize = totalDownLoadSymbol.size();
 
@@ -323,7 +323,7 @@ public class PolicyPage {
     }
 
     public String verifyPolicyStatusUponDropDown() {
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         List<WebElement> policyStatus = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@id='gridName']/table/tbody[1]/tr")));
         String Status = " ";
         for (WebElement status : policyStatus) {
