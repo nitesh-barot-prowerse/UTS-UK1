@@ -467,4 +467,23 @@ public class PolicyPageSteps {
         }
     }
 
+    //Add claim for existing policy
+
+
+    @When("User click on policy icon and selects add claim icon for existing policy")
+    public void user_click_on_policy_icon_and_selects_add_claim_icon_for_existing_policy() {
+        policyPage.clickAddClaimIcon();
+    }
+
+    @When("User enters claim details")
+    public void user_enters_claim_details() {
+        policyPage.enterClaimPolicyInfo();
+    }
+
+    @When("User clicks on save button")
+    public void user_clicks_on_save_button() {
+        policyPage.clickOnSaveClaimButton();
+
+    }
+
 }

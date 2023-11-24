@@ -1,5 +1,281 @@
-[INFO ] 2023-08-31 15:47:10.754 [main] Log - User Opens US-UK-2 Website
-[INFO ] 2023-08-31 15:47:39.194 [main] Log - User Opens US-UK-2 Website
-[INFO ] 2023-08-31 15:47:40.213 [main] Log - User Enters Username And Password
-[INFO ] 2023-08-31 15:47:45.449 [main] Log - User Redirects To DashBord And Verify Through Message DashBoard On Page
-[INFO ] 2023-08-31 15:47:48.496 [main] Log - User verify (en-GB) text on right top corner of dash board page 
+[INFO ] 2023-11-24 09:45:14.980 [main] Log - **********Generate Quote For Exotic Test Case Starts Here************
+[INFO ] 2023-11-24 09:45:16.511 [main] Log - Selected Breed Is==Exotic
+[INFO ] 2023-11-24 09:45:31.083 [main] Log - Client Title is== 
+[INFO ] 2023-11-24 09:45:32.221 [main] Log - Client FirstName is==testUserLastName
+[INFO ] 2023-11-24 09:45:32.341 [main] Log - Client LastName is==LastName
+[INFO ] 2023-11-24 09:45:35.674 [main] Log - Client Date Of Birth Is==12/03/1988
+[INFO ] 2023-11-24 09:45:36.815 [main] Log - Client Email Id Is==nitesh.barot@prowersenew.com
+[INFO ] 2023-11-24 09:45:41.166 [main] Log - Client PostCode Is==RM8 2TE4 Lake Close, Dagenham
+[INFO ] 2023-11-24 09:45:42.792 [main] Log - Client Primary Contact Number Is==4567456745
+[INFO ] 2023-11-24 09:45:45.005 [main] Log - Client heared about company from==
+[INFO ] 2023-11-24 09:45:47.559 [main] Log - Exotic Breed is==
+[INFO ] 2023-11-24 09:45:49.795 [main] Log - Exotic Gender is==Male
+[INFO ] 2023-11-24 09:45:54.505 [main] Log - Exotic Species Name is==testExotic
+[INFO ] 2023-11-24 09:45:55.643 [main] Log - Exotic date of birth is==01.01.2022
+[INFO ] 2023-11-24 09:45:57.809 [main] Log - Exotic purchased price is==1200
+[INFO ] 2023-11-24 09:46:05.454 [main] Log - Cover Start Date is== 12/11/2023
+[INFO ] 2023-11-24 09:46:08.265 [main] Log - Client has clicked radio button of assumption 
+[INFO ] 2023-11-24 09:46:09.320 [main] Log - Client has checked terms and condition check box
+[INFO ] 2023-11-24 09:46:12.417 [main] Log - Payment Frequency Option Selected By Client is==
+[INFO ] 2023-11-24 10:15:26.289 [main] Log - **********Generate Quote For Exotic Test Case Starts Here************
+[INFO ] 2023-11-24 10:15:27.822 [main] Log - Selected Breed Is==Exotic
+[INFO ] 2023-11-24 10:15:42.315 [main] Log - Client Title is== 
+[INFO ] 2023-11-24 10:15:43.475 [main] Log - Client FirstName is==testUserLastName
+[INFO ] 2023-11-24 10:15:43.602 [main] Log - Client LastName is==LastName
+[INFO ] 2023-11-24 10:15:46.911 [main] Log - Client Date Of Birth Is==12/03/1988
+[INFO ] 2023-11-24 10:15:48.094 [main] Log - Client Email Id Is==nitesh.barot@prowersenew.com
+[INFO ] 2023-11-24 10:15:52.395 [main] Log - Client PostCode Is==RM8 2TE4 Lake Close, Dagenham
+[INFO ] 2023-11-24 10:15:54.030 [main] Log - Client Primary Contact Number Is==4567456745
+[INFO ] 2023-11-24 10:15:56.226 [main] Log - Client heared about company from==
+[INFO ] 2023-11-24 10:15:58.799 [main] Log - Exotic Breed is==
+[INFO ] 2023-11-24 10:16:01.039 [main] Log - Exotic Gender is==Male
+[INFO ] 2023-11-24 10:16:05.746 [main] Log - Exotic Species Name is==testExotic
+[INFO ] 2023-11-24 10:16:06.870 [main] Log - Exotic date of birth is==01.01.2022
+[INFO ] 2023-11-24 10:16:09.064 [main] Log - Exotic purchased price is==1200
+[INFO ] 2023-11-24 10:16:16.667 [main] Log - Cover Start Date is== 12/11/2023
+[INFO ] 2023-11-24 10:16:19.483 [main] Log - Client has clicked radio button of assumption 
+[INFO ] 2023-11-24 10:16:20.527 [main] Log - Client has checked terms and condition check box
+[INFO ] 2023-11-24 10:16:23.655 [main] Log - Payment Frequency Option Selected By Client is==
+[INFO ] 2023-11-24 10:16:25.290 [main] Log - Mode Of Payment  Option Selected By Client is==Other
+[INFO ] 2023-11-24 10:16:26.408 [main] Log - Client Has clicked on generate Policy button==  Create Policy
+[INFO ] 2023-11-24 10:18:54.121 [main] Log - **********Generate Quote For Exotic Test Case Starts Here************
+[INFO ] 2023-11-24 10:18:55.590 [main] Log - Selected Breed Is==Exotic
+[INFO ] 2023-11-24 10:19:10.092 [main] Log - Client Title is== 
+[INFO ] 2023-11-24 10:19:11.247 [main] Log - Client FirstName is==testUserLastName
+[INFO ] 2023-11-24 10:19:11.363 [main] Log - Client LastName is==LastName
+[INFO ] 2023-11-24 10:19:14.681 [main] Log - Client Date Of Birth Is==12/03/1988
+[INFO ] 2023-11-24 10:19:15.823 [main] Log - Client Email Id Is==nitesh.barot@prowersenew.com
+[INFO ] 2023-11-24 10:19:20.117 [main] Log - Client PostCode Is==RM8 2TE4 Lake Close, Dagenham
+[INFO ] 2023-11-24 10:19:21.735 [main] Log - Client Primary Contact Number Is==4567456745
+[INFO ] 2023-11-24 10:19:23.977 [main] Log - Client heared about company from==
+[INFO ] 2023-11-24 10:19:26.567 [main] Log - Exotic Breed is==
+[INFO ] 2023-11-24 10:19:28.797 [main] Log - Exotic Gender is==Male
+[INFO ] 2023-11-24 10:19:33.514 [main] Log - Exotic Species Name is==testExotic
+[INFO ] 2023-11-24 10:19:34.649 [main] Log - Exotic date of birth is==12/09/2022
+[INFO ] 2023-11-24 10:19:36.828 [main] Log - Exotic purchased price is==1200
+[INFO ] 2023-11-24 10:19:44.424 [main] Log - Cover Start Date is== 12/11/2023
+[INFO ] 2023-11-24 10:19:47.225 [main] Log - Client has clicked radio button of assumption 
+[INFO ] 2023-11-24 10:19:48.280 [main] Log - Client has checked terms and condition check box
+[INFO ] 2023-11-24 10:19:51.380 [main] Log - Payment Frequency Option Selected By Client is==
+[INFO ] 2023-11-24 10:19:53.014 [main] Log - Mode Of Payment  Option Selected By Client is==Other
+[INFO ] 2023-11-24 10:19:54.163 [main] Log - Client Has clicked on generate Policy button==  Create Policy
+[INFO ] 2023-11-24 10:25:18.269 [main] Log - **********Generate Quote For Horse Product Test Case Starts Here************
+[INFO ] 2023-11-24 10:25:19.711 [main] Log - Selected Breed Is==Horse
+[INFO ] 2023-11-24 10:25:34.220 [main] Log - Client Title is== 
+[INFO ] 2023-11-24 10:25:35.335 [main] Log - Client FirstName is==testUserLastName
+[INFO ] 2023-11-24 10:25:35.456 [main] Log - Client LastName is==LastName
+[INFO ] 2023-11-24 10:25:38.817 [main] Log - Client Date Of Birth Is==12/03/1988
+[INFO ] 2023-11-24 10:25:39.951 [main] Log - Client Email Id Is==nitesh.barot@prowersenew.com
+[INFO ] 2023-11-24 10:25:44.224 [main] Log - Client PostCode Is==RM8 2TE4 Lake Close, Dagenham
+[INFO ] 2023-11-24 10:25:45.842 [main] Log - Client Primary Contact Number Is==4567456745
+[INFO ] 2023-11-24 10:25:48.063 [main] Log - Client heared about company from==
+[INFO ] 2023-11-24 10:25:50.369 [main] Log - Horse Breed is== Percheron
+[INFO ] 2023-11-24 10:25:52.612 [main] Log - Horse Color is== Bay
+[INFO ] 2023-11-24 10:25:54.851 [main] Log - Horse Age is== 7 years
+[INFO ] 2023-11-24 10:25:57.111 [main] Log - Horse Sex Type is== Mare
+[INFO ] 2023-11-24 10:25:59.361 [main] Log - Horse Height is== 7.1
+[INFO ] 2023-11-24 10:26:01.634 [main] Log - Horse activity is== 
+[INFO ] 2023-11-24 10:26:03.876 [main] Log - Horse ownership type is== Owned
+[INFO ] 2023-11-24 10:26:08.013 [main] Log - Horse Species Name is==testHorse
+[INFO ] 2023-11-24 10:26:09.177 [main] Log - Horse date of birth is==06/11/2023
+[INFO ] 2023-11-24 10:26:11.305 [main] Log - Horse height is==1500
+[INFO ] 2023-11-24 10:26:13.431 [main] Log - Horse stud fees is==1200
+[INFO ] 2023-11-24 10:26:23.002 [main] Log - Policy Start Date is==11.11.2023
+[INFO ] 2023-11-24 10:26:31.661 [main] Log - Client Has clicked on disclosure
+[INFO ] 2023-11-24 10:26:36.359 [main] Log - Payment Frequency Option Selected By Client is==
+[INFO ] 2023-11-24 10:26:38.007 [main] Log - Mode Of Payment  Option Selected By Client is==Other
+[INFO ] 2023-11-24 10:26:39.196 [main] Log - Client Has clicked on generate Policy button==  Create Policy
+[INFO ] 2023-11-24 10:29:18.279 [main] Log - **********Generate Quote For Professional Product Test Case Starts Here************
+[INFO ] 2023-11-24 10:29:19.814 [main] Log - Selected Breed Is==Professional
+[INFO ] 2023-11-24 10:29:34.309 [main] Log - Client Title is== 
+[INFO ] 2023-11-24 10:29:35.467 [main] Log - Client FirstName is==testUserLastName
+[INFO ] 2023-11-24 10:29:35.591 [main] Log - Client LastName is==LastName
+[INFO ] 2023-11-24 10:29:38.906 [main] Log - Client Date Of Birth Is==12/03/1988
+[INFO ] 2023-11-24 10:29:40.053 [main] Log - Client Email Id Is==nitesh.barot@prowersenew.com
+[INFO ] 2023-11-24 10:29:44.360 [main] Log - Client PostCode Is==RM8 2TE4 Lake Close, Dagenham
+[INFO ] 2023-11-24 10:29:45.983 [main] Log - Client Primary Contact Number Is==4567456745
+[INFO ] 2023-11-24 10:29:48.179 [main] Log - Client heared about company from==Recommendation
+[INFO ] 2023-11-24 10:29:50.508 [main] Log - Professional business type is== 
+[INFO ] 2023-11-24 10:29:52.733 [main] Log - Professional business is== Sole trader
+[INFO ] 2023-11-24 10:30:00.111 [main] Log - Policy Start Date is==11.11.2023
+[INFO ] 2023-11-24 10:30:11.067 [main] Log - Payment Frequency Option Selected By Client is==
+[INFO ] 2023-11-24 10:30:12.708 [main] Log - Mode Of Payment  Option Selected By Client is==Other
+[INFO ] 2023-11-24 10:30:13.903 [main] Log - Client Has clicked on generate Policy button==  Create Policy
+[INFO ] 2023-11-24 10:47:00.576 [main] Log - **********Generate Quote For Exotic Test Case Starts Here************
+[INFO ] 2023-11-24 10:47:02.118 [main] Log - Selected Breed Is==Exotic
+[INFO ] 2023-11-24 10:47:16.612 [main] Log - Client Title is== 
+[INFO ] 2023-11-24 10:47:17.744 [main] Log - Client FirstName is==testUserLastName
+[INFO ] 2023-11-24 10:47:17.868 [main] Log - Client LastName is==LastName
+[INFO ] 2023-11-24 10:47:21.176 [main] Log - Client Date Of Birth Is==12/03/1988
+[INFO ] 2023-11-24 10:47:22.321 [main] Log - Client Email Id Is==nitesh.barot@prowersenew.com
+[INFO ] 2023-11-24 10:47:26.673 [main] Log - Client PostCode Is==RM8 2TE4 Lake Close, Dagenham
+[INFO ] 2023-11-24 10:47:28.299 [main] Log - Client Primary Contact Number Is==4567456745
+[INFO ] 2023-11-24 10:47:30.491 [main] Log - Client heared about company from==
+[INFO ] 2023-11-24 10:47:33.119 [main] Log - Exotic Breed is==
+[INFO ] 2023-11-24 10:47:35.364 [main] Log - Exotic Gender is==Male
+[INFO ] 2023-11-24 10:47:40.114 [main] Log - Exotic Species Name is==testExotic
+[INFO ] 2023-11-24 10:47:41.261 [main] Log - Exotic date of birth is==12/09/2022
+[INFO ] 2023-11-24 10:47:43.447 [main] Log - Exotic purchased price is==1200
+[INFO ] 2023-11-24 10:47:51.166 [main] Log - Cover Start Date is== 12/11/2023
+[INFO ] 2023-11-24 10:47:54.032 [main] Log - Client has clicked radio button of assumption 
+[INFO ] 2023-11-24 10:47:55.075 [main] Log - Client has checked terms and condition check box
+[INFO ] 2023-11-24 10:47:58.184 [main] Log - Payment Frequency Option Selected By Client is==
+[INFO ] 2023-11-24 10:47:59.372 [main] Log - Mode Of Payment  Option Selected By Client is==Credit/Debit Card
+[INFO ] 2023-11-24 10:48:10.522 [main] Log - Client Has clicked on generate Policy button==  Create Policy
+[INFO ] 2023-11-24 10:51:11.251 [main] Log - **********Generate Quote For Exotic Test Case Starts Here************
+[INFO ] 2023-11-24 10:51:12.904 [main] Log - Selected Breed Is==Exotic
+[INFO ] 2023-11-24 10:51:27.441 [main] Log - Client Title is== Mr
+[INFO ] 2023-11-24 10:51:28.583 [main] Log - Client FirstName is==testUserLastName
+[INFO ] 2023-11-24 10:51:28.748 [main] Log - Client LastName is==LastName
+[INFO ] 2023-11-24 10:51:32.065 [main] Log - Client Date Of Birth Is==12/03/1988
+[INFO ] 2023-11-24 10:51:33.220 [main] Log - Client Email Id Is==nitesh.barot@prowersenew.com
+[INFO ] 2023-11-24 10:51:37.528 [main] Log - Client PostCode Is==RM8 2TE4 Lake Close, Dagenham
+[INFO ] 2023-11-24 10:51:39.154 [main] Log - Client Primary Contact Number Is==4567456745
+[INFO ] 2023-11-24 10:51:41.346 [main] Log - Client heared about company from==
+[INFO ] 2023-11-24 10:51:43.997 [main] Log - Exotic Breed is==
+[INFO ] 2023-11-24 10:51:46.255 [main] Log - Exotic Gender is==Male
+[INFO ] 2023-11-24 10:51:50.982 [main] Log - Exotic Species Name is==testExotic
+[INFO ] 2023-11-24 10:51:52.115 [main] Log - Exotic date of birth is==12/09/2022
+[INFO ] 2023-11-24 10:51:54.405 [main] Log - Exotic purchased price is==1200
+[INFO ] 2023-11-24 10:52:02.043 [main] Log - Cover Start Date is== 12/11/2023
+[INFO ] 2023-11-24 10:52:05.852 [main] Log - Client has clicked radio button of assumption 
+[INFO ] 2023-11-24 10:52:06.900 [main] Log - Client has checked terms and condition check box
+[INFO ] 2023-11-24 10:52:10.018 [main] Log - Payment Frequency Option Selected By Client is==
+[INFO ] 2023-11-24 10:52:11.210 [main] Log - Mode Of Payment  Option Selected By Client is==Direct Debit
+[INFO ] 2023-11-24 10:52:15.821 [main] Log - Client Has clicked on generate Policy button==  Create Policy
+[INFO ] 2023-11-24 11:00:13.746 [main] Log - **********Generate Quote For Horse Product Test Case Starts Here************
+[INFO ] 2023-11-24 11:00:15.280 [main] Log - Selected Breed Is==Horse
+[INFO ] 2023-11-24 11:00:29.749 [main] Log - Client Title is== 
+[INFO ] 2023-11-24 11:00:30.882 [main] Log - Client FirstName is==testUserLastName
+[INFO ] 2023-11-24 11:00:30.992 [main] Log - Client LastName is==LastName
+[INFO ] 2023-11-24 11:00:34.291 [main] Log - Client Date Of Birth Is==12/03/1988
+[INFO ] 2023-11-24 11:00:35.429 [main] Log - Client Email Id Is==nitesh.barot@prowersenew.com
+[INFO ] 2023-11-24 11:00:39.724 [main] Log - Client PostCode Is==RM8 2TE4 Lake Close, Dagenham
+[INFO ] 2023-11-24 11:00:41.338 [main] Log - Client Primary Contact Number Is==4567456745
+[INFO ] 2023-11-24 11:00:43.558 [main] Log - Client heared about company from==
+[INFO ] 2023-11-24 11:00:45.894 [main] Log - Horse Breed is== Percheron
+[INFO ] 2023-11-24 11:00:48.145 [main] Log - Horse Color is== Bay
+[INFO ] 2023-11-24 11:00:50.388 [main] Log - Horse Age is== 7 years
+[INFO ] 2023-11-24 11:00:52.670 [main] Log - Horse Sex Type is== 
+[INFO ] 2023-11-24 11:00:54.902 [main] Log - Horse Height is== 7.1
+[INFO ] 2023-11-24 11:00:57.125 [main] Log - Horse activity is== 
+[INFO ] 2023-11-24 11:00:59.381 [main] Log - Horse ownership type is== Owned
+[INFO ] 2023-11-24 11:01:03.536 [main] Log - Horse Species Name is==testHorse
+[INFO ] 2023-11-24 11:01:04.702 [main] Log - Horse date of birth is==06/11/2023
+[INFO ] 2023-11-24 11:01:06.825 [main] Log - Horse height is==1500
+[INFO ] 2023-11-24 11:01:08.957 [main] Log - Horse stud fees is==1200
+[INFO ] 2023-11-24 11:01:18.555 [main] Log - Policy Start Date is==11.11.2023
+[INFO ] 2023-11-24 11:01:27.217 [main] Log - Client Has clicked on disclosure
+[INFO ] 2023-11-24 11:01:31.912 [main] Log - Payment Frequency Option Selected By Client is==
+[INFO ] 2023-11-24 11:01:33.153 [main] Log - Mode Of Payment  Option Selected By Client is==Credit/Debit Card
+[INFO ] 2023-11-24 11:01:44.334 [main] Log - Client Has clicked on generate Policy button==  Create Policy
+[INFO ] 2023-11-24 11:42:22.504 [main] Log - **********Generate Quote For Horse Product Test Case Starts Here************
+[INFO ] 2023-11-24 11:42:23.917 [main] Log - Selected Breed Is==Horse
+[INFO ] 2023-11-24 11:42:38.435 [main] Log - Client Title is== Mr
+[INFO ] 2023-11-24 11:42:39.562 [main] Log - Client FirstName is==testUserLastName
+[INFO ] 2023-11-24 11:42:39.664 [main] Log - Client LastName is==LastName
+[INFO ] 2023-11-24 11:42:42.948 [main] Log - Client Date Of Birth Is==12/03/1988
+[INFO ] 2023-11-24 11:42:44.125 [main] Log - Client Email Id Is==nitesh.barot@prowersenew.com
+[INFO ] 2023-11-24 11:42:48.408 [main] Log - Client PostCode Is==RM8 2TE4 Lake Close, Dagenham
+[INFO ] 2023-11-24 11:42:50.005 [main] Log - Client Primary Contact Number Is==4567456745
+[INFO ] 2023-11-24 11:42:52.234 [main] Log - Client heared about company from==Recommendation
+[INFO ] 2023-11-24 11:42:54.579 [main] Log - Horse Breed is== Percheron
+[INFO ] 2023-11-24 11:42:56.805 [main] Log - Horse Color is== Bay
+[INFO ] 2023-11-24 11:42:59.055 [main] Log - Horse Age is== 7 years
+[INFO ] 2023-11-24 11:43:01.313 [main] Log - Horse Sex Type is== Mare
+[INFO ] 2023-11-24 11:43:03.544 [main] Log - Horse Height is== 7.1
+[INFO ] 2023-11-24 11:43:05.818 [main] Log - Horse activity is== 
+[INFO ] 2023-11-24 11:43:08.013 [main] Log - Horse ownership type is== Owned
+[INFO ] 2023-11-24 11:43:12.135 [main] Log - Horse Species Name is==testHorse
+[INFO ] 2023-11-24 11:43:13.287 [main] Log - Horse date of birth is==06/11/2023
+[INFO ] 2023-11-24 11:43:15.420 [main] Log - Horse height is==1500
+[INFO ] 2023-11-24 11:43:17.551 [main] Log - Horse stud fees is==1200
+[INFO ] 2023-11-24 11:43:27.316 [main] Log - Policy Start Date is==11.11.2023
+[INFO ] 2023-11-24 11:43:36.029 [main] Log - Client Has clicked on disclosure
+[INFO ] 2023-11-24 11:43:40.703 [main] Log - Payment Frequency Option Selected By Client is==
+[INFO ] 2023-11-24 11:43:41.842 [main] Log - Mode Of Payment  Option Selected By Client is==Direct Debit
+[INFO ] 2023-11-24 11:43:46.368 [main] Log - Client Has clicked on generate Policy button==  Create Policy
+[INFO ] 2023-11-24 11:48:44.882 [main] Log - **********Generate Quote For Professional Product Test Case Starts Here************
+[INFO ] 2023-11-24 11:48:46.406 [main] Log - Selected Breed Is==Professional
+[INFO ] 2023-11-24 11:49:00.882 [main] Log - Client Title is== 
+[INFO ] 2023-11-24 11:49:02.006 [main] Log - Client FirstName is==testUserLastName
+[INFO ] 2023-11-24 11:49:02.144 [main] Log - Client LastName is==LastName
+[INFO ] 2023-11-24 11:49:05.482 [main] Log - Client Date Of Birth Is==12/03/1988
+[INFO ] 2023-11-24 11:49:06.636 [main] Log - Client Email Id Is==nitesh.barot@prowersenew.com
+[INFO ] 2023-11-24 11:49:10.929 [main] Log - Client PostCode Is==RM8 2TE4 Lake Close, Dagenham
+[INFO ] 2023-11-24 11:49:12.567 [main] Log - Client Primary Contact Number Is==4567456745
+[INFO ] 2023-11-24 11:49:14.811 [main] Log - Client heared about company from==
+[INFO ] 2023-11-24 11:49:17.096 [main] Log - Professional business type is== 
+[INFO ] 2023-11-24 11:49:19.371 [main] Log - Professional business is== Sole trader
+[INFO ] 2023-11-24 11:49:26.738 [main] Log - Policy Start Date is==11.11.2023
+[INFO ] 2023-11-24 11:49:37.690 [main] Log - Payment Frequency Option Selected By Client is==
+[INFO ] 2023-11-24 11:49:38.873 [main] Log - Mode Of Payment  Option Selected By Client is==Credit/Debit Card
+[INFO ] 2023-11-24 11:49:50.010 [main] Log - Client Has clicked on generate Policy button==  Create Policy
+[INFO ] 2023-11-24 11:50:16.678 [main] Log - **********Generate Quote For Professional Product Test Case Starts Here************
+[INFO ] 2023-11-24 11:50:18.057 [main] Log - Selected Breed Is==Professional
+[INFO ] 2023-11-24 11:50:32.251 [main] Log - Client Title is== Mr
+[INFO ] 2023-11-24 11:50:33.407 [main] Log - Client FirstName is==testUserLastName
+[INFO ] 2023-11-24 11:50:33.549 [main] Log - Client LastName is==LastName
+[INFO ] 2023-11-24 11:50:36.861 [main] Log - Client Date Of Birth Is==12/03/1988
+[INFO ] 2023-11-24 11:50:38.019 [main] Log - Client Email Id Is==nitesh.barot@prowersenew.com
+[INFO ] 2023-11-24 11:50:42.322 [main] Log - Client PostCode Is==RM8 2TE4 Lake Close, Dagenham
+[INFO ] 2023-11-24 11:50:43.975 [main] Log - Client Primary Contact Number Is==4567456745
+[INFO ] 2023-11-24 11:50:46.173 [main] Log - Client heared about company from==Recommendation
+[INFO ] 2023-11-24 11:50:48.467 [main] Log - Professional business type is== 
+[INFO ] 2023-11-24 11:50:50.745 [main] Log - Professional business is== 
+[INFO ] 2023-11-24 11:50:58.128 [main] Log - Policy Start Date is==11.11.2023
+[INFO ] 2023-11-24 11:51:09.079 [main] Log - Payment Frequency Option Selected By Client is==
+[INFO ] 2023-11-24 11:51:10.306 [main] Log - Mode Of Payment  Option Selected By Client is==Direct Debit
+[INFO ] 2023-11-24 11:51:14.851 [main] Log - Client Has clicked on generate Policy button==  Create Policy
+[INFO ] 2023-11-24 13:12:59.409 [main] Log - User Opens US-UK-2 Website
+[INFO ] 2023-11-24 13:13:28.026 [main] Log - User Opens US-UK-2 Website
+[INFO ] 2023-11-24 13:13:29.045 [main] Log - User Enters Username And Password
+[INFO ] 2023-11-24 13:13:34.217 [main] Log - User Redirects To DashBord And Verify Through Message DashBoard On Page
+[INFO ] 2023-11-24 13:13:37.243 [main] Log - User verify (en-GB) text on right top corner of dash board page 
+[INFO ] 2023-11-24 13:17:06.166 [main] Log - *******Script To Create Claim For Existing policy ===LAST-0010-HHPL-00000001===start here*****
+[INFO ] 2023-11-24 13:17:06.235 [main] Log - Enter Policy Number ==LAST-0010-HHPL-00000001
+[INFO ] 2023-11-24 13:17:07.293 [main] Log - Click On Search Button On Manage Policy Page
+[INFO ] 2023-11-24 13:17:10.425 [main] Log - Script Has Clicked On Cog Icon To Select Add Account Maintenance Page Icon
+[INFO ] 2023-11-24 13:17:11.992 [main] Log - Select Add claim icon from cog dropdown on manage policy page for selected policy to launch add claim page 
+[INFO ] 2023-11-24 13:17:18.016 [main] Log - Script Redirects To Add Claim Page is===>https://stage.petcovergroup.com:8888/Claim/AddClaimForPolicy/68AE2A
+[INFO ] 2023-11-24 13:17:20.111 [main] Log - Select Cover Type option==
+[INFO ] 2023-11-24 13:17:21.229 [main] Log - Entered Treatment Date is== 11.10.2023
+[INFO ] 2023-11-24 13:17:22.290 [main] Log - Entered first claim advised  Date is== 11.10.2023
+[INFO ] 2023-11-24 13:17:24.370 [main] Log - Selected claim notified method is==Mail
+[INFO ] 2023-11-24 13:17:26.469 [main] Log - Selected Payment to option is==Insured
+[INFO ] 2023-11-24 13:17:28.561 [main] Log - Selected condition Type is ==Illness
+[INFO ] 2023-11-24 13:17:30.660 [main] Log - Entered Claim amount is==1200
+[INFO ] 2023-11-24 13:17:34.728 [main] Log - Selected loss cause is==Allergies or allergic reaction(s) or skin disorder(s)
+[INFO ] 2023-11-24 13:17:37.579 [main] Log - Cliked On Save Button
+[INFO ] 2023-11-24 13:18:01.983 [main] Log - **********Generate Quote For Professional Product Test Case Starts Here************
+[INFO ] 2023-11-24 13:18:03.267 [main] Log - Selected Breed Is==Professional
+[INFO ] 2023-11-24 13:18:17.569 [main] Log - Client Title is== Mr
+[INFO ] 2023-11-24 13:18:18.655 [main] Log - Client FirstName is==testUserLastName
+[INFO ] 2023-11-24 13:18:18.743 [main] Log - Client LastName is==LastName
+[INFO ] 2023-11-24 13:18:21.932 [main] Log - Client Date Of Birth Is==12/03/1988
+[INFO ] 2023-11-24 13:18:23.013 [main] Log - Client Email Id Is==nitesh.barot@prowersenew.com
+[INFO ] 2023-11-24 13:18:27.174 [main] Log - Client PostCode Is==RM8 2TE4 Lake Close, Dagenham
+[INFO ] 2023-11-24 13:18:28.742 [main] Log - Client Primary Contact Number Is==4567456745
+[INFO ] 2023-11-24 13:18:30.879 [main] Log - Client heared about company from==Recommendation
+[INFO ] 2023-11-24 13:18:33.055 [main] Log - Professional business type is== Pet Sitting
+[INFO ] 2023-11-24 13:18:35.225 [main] Log - Professional business is== Sole trader
+[INFO ] 2023-11-24 13:18:42.458 [main] Log - Policy Start Date is==11.11.2023
+[INFO ] 2023-11-24 13:18:53.115 [main] Log - Payment Frequency Option Selected By Client is==
+[INFO ] 2023-11-24 13:18:54.242 [main] Log - Mode Of Payment  Option Selected By Client is==Credit/Debit Card
+[INFO ] 2023-11-24 13:19:04.930 [main] Log - Client Has clicked on generate Policy button==  Create Policy
+[INFO ] 2023-11-24 13:19:28.894 [main] Log - **********Generate Quote For Professional Product Test Case Starts Here************
+[INFO ] 2023-11-24 13:19:30.166 [main] Log - Selected Breed Is==Professional
+[INFO ] 2023-11-24 13:19:44.329 [main] Log - Client Title is== Mr
+[INFO ] 2023-11-24 13:19:45.418 [main] Log - Client FirstName is==testUserLastName
+[INFO ] 2023-11-24 13:19:45.495 [main] Log - Client LastName is==LastName
+[INFO ] 2023-11-24 13:19:48.683 [main] Log - Client Date Of Birth Is==12/03/1988
+[INFO ] 2023-11-24 13:19:49.773 [main] Log - Client Email Id Is==nitesh.barot@prowersenew.com
+[INFO ] 2023-11-24 13:19:53.988 [main] Log - Client PostCode Is==RM8 2TE4 Lake Close, Dagenham
+[INFO ] 2023-11-24 13:19:55.561 [main] Log - Client Primary Contact Number Is==4567456745
+[INFO ] 2023-11-24 13:19:57.684 [main] Log - Client heared about company from==Recommendation
+[INFO ] 2023-11-24 13:19:59.876 [main] Log - Professional business type is== Pet Sitting
+[INFO ] 2023-11-24 13:20:02.038 [main] Log - Professional business is== Sole trader
+[INFO ] 2023-11-24 13:20:09.266 [main] Log - Policy Start Date is==11.11.2023
+[INFO ] 2023-11-24 13:20:19.860 [main] Log - Payment Frequency Option Selected By Client is==
+[INFO ] 2023-11-24 13:20:20.979 [main] Log - Mode Of Payment  Option Selected By Client is==Direct Debit
+[INFO ] 2023-11-24 13:20:25.315 [main] Log - Client Has clicked on generate Policy button==  Create Policy

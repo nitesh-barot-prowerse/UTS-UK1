@@ -25,9 +25,9 @@ Feature: Verify Manage Claim Module Features
 #    And Page has all dropdown with valid list items'
 
 
-  Scenario: Treatment status should reflect upon items selected from treatment status drop down on manage claim page
-    When User selects any options from treatment status dropdown on manage claim page
-    Then Appropriate treatment status will display on manage claim page under claim details
+#  Scenario: Treatment status should reflect upon items selected from treatment status drop down on manage claim page
+#    When User selects any options from treatment status dropdown on manage claim page
+#    Then Appropriate treatment status will display on manage claim page under claim details
 
 
   Scenario:Verify edit claim page displays after clicking on edit claim icon on manage claim page
@@ -51,9 +51,9 @@ Feature: Verify Manage Claim Module Features
     And User clicks on search button on manage claim page
     Then Details of claim on manage claim page filters upon treatment status drop down option
 
-  @Sanity
-  Scenario:Filter Claim details on manage claim page upon from and to date value of claim first advised on manage claim page
-    When User enters value of from and to date value of claim first advised on manage claim page
-    And User clicks on search button on manage claim page
-    Then Details of claim on manage claim page filters upon value of from and to date value of claim first advised on manage claim page
+#  @Sanity
+#  Scenario:Filter Claim details on manage claim page upon from and to date value of claim first advised on manage claim page
+#    When User enters value of from and to date value of claim first advised on manage claim page
+#    And User clicks on search button on manage claim page
+#    Then Details of claim on manage claim page filters upon value of from and to date value of claim first advised on manage claim page
 

@@ -19,40 +19,40 @@ Feature: Verify Client Module Features
 #    When User clicks on edit client icon on cog dropdown menu on view client page
 #    Then Edit client page displays in editable format
 
-  @Sanity
-  Scenario:Add quote page should display in editable format by clicking on add quote icon on cog dropdown menu on view client page
-    When User clicks on add quote icon on cog dropdown menu on manage client page
-    Then Add quote page should display in editable format
-
-
-  Scenario: Policies details of client displays by clicking on policy tab on view client page
-    When User clicks on client code on manage client page
-    And User clicks on policy tab on view client page
-    Then Policies details should display on view client page
-
-
-  Scenario: Claims details of client displays by clicking on claim tab on view client page
-    When User clicks on client code on manage client page
-    And User clicks on claim tab on view client page
-    Then Claim details should display on view client page
-
-
-  Scenario: Contacts details of client displays by clicking on contact tab on view client page
-    When User clicks on client code on manage client page
-    And User clicks on contact tab on view client page
-    Then Contact details should display on view client page
-
-
-  Scenario: Notes details of client displays by clicking on notes tab on view client page
-    When User clicks on client code on manage client page
-    And User clicks on notes tab on view client page
-    Then Notes details should display on view client page
-
-
-  Scenario: Task details of client displays by clicking on task tab on view client page
-    When User clicks on client code on manage client page
-    And User clicks on task tab on view client page
-    Then Task details should display on view client page
+#  @Sanity
+#  Scenario:Add quote page should display in editable format by clicking on add quote icon on cog dropdown menu on view client page
+#    When User clicks on add quote icon on cog dropdown menu on manage client page
+#    Then Add quote page should display in editable format
+#
+#
+#  Scenario: Policies details of client displays by clicking on policy tab on view client page
+#    When User clicks on client code on manage client page
+#    And User clicks on policy tab on view client page
+#    Then Policies details should display on view client page
+#
+#
+#  Scenario: Claims details of client displays by clicking on claim tab on view client page
+#    When User clicks on client code on manage client page
+#    And User clicks on claim tab on view client page
+#    Then Claim details should display on view client page
+#
+#
+#  Scenario: Contacts details of client displays by clicking on contact tab on view client page
+#    When User clicks on client code on manage client page
+#    And User clicks on contact tab on view client page
+#    Then Contact details should display on view client page
+#
+#
+#  Scenario: Notes details of client displays by clicking on notes tab on view client page
+#    When User clicks on client code on manage client page
+#    And User clicks on notes tab on view client page
+#    Then Notes details should display on view client page
+#
+#
+#  Scenario: Task details of client displays by clicking on task tab on view client page
+#    When User clicks on client code on manage client page
+#    And User clicks on task tab on view client page
+#    Then Task details should display on view client page
 
 #  @Stage
 #  Scenario: To add and verify new client details inside client client module

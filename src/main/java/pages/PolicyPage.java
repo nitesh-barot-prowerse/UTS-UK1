@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import utils.Log;
 
 import java.time.Duration;
 import java.util.ArrayList;
@@ -141,6 +142,46 @@ public class PolicyPage {
     private By policyLedgerTab=By.xpath("//div[@class='project-tabs user-profile dsh-tab']/ul/li[13]");
 
     private By detailsOfPolicyLedgerTab=By.xpath("//div[@id='gridPolicyDebtorLedgerList']/table/tbody/tr");
+
+    //Add claim for policy
+
+    private By cogIconOnPolicyManagePage = By.xpath("//div[@id='gridName']/table/tbody/tr[1]/td[16]/ul/li/a");
+
+    private By addClaimOnCogIcon = By.xpath("//div[@id='gridName']/table/tbody/tr[1]/td[16]/ul/li/ul/li[1]/a");
+
+    private By coverDropDown = By.xpath("//div[@class='ibox-content']/div[6]/div[3]/div/div/div[7]/div/div/div/span");
+
+    private By optionOfCoverDD = By.xpath("//ul[@id='ClaimCoverDetailId_listbox']/li[2]");
+
+    private By treatmentDate = By.cssSelector("input[id='DateOfLoss']");
+
+    private By firstClaimAdvised = By.cssSelector("input[id='NotifiedDate']");
+
+    private By firstNotification = By.cssSelector("input[id='FirstNotificationAcknowledgmentDate']");
+
+    private By manifestationDate = By.cssSelector("input[id='ManifestationDate']");
+
+    private By notifiedMethodDropDown = By.xpath("//div[@class='ibox-content']/div[6]/div[4]/div/div/div[3]/div/div/div[5]/div/div/div/span");
+
+    private By optionOfNotifiedDD = By.xpath("//ul[@id='NotificationMethod_listbox']/li[4]");
+
+    private By paymentToDropDown = By.xpath("//div[@class='ibox-content']/div[6]/div[4]/div/div/div[3]/div/div/div[8]/div/div/div/span");
+
+    private By optionOfPaymentToDD = By.xpath("//ul[@id='PayBy_listbox']/li[2]");
+
+    private By chequeName = By.className("input[id='ChequeName']");
+
+    private By conditionTypeDropDown = By.xpath("/div[@class='ibox-content']/div[6]/div[4]/div/div/div[3]/div/div/div[14]/div/div/div/span");
+
+    private By optionOfConditionTypeDD = By.xpath("//ul[@id='ConditionType_listbox']/li[3]");
+
+    private By claimAmount = By.cssSelector("input[id='ClaimAmount']");
+
+    private By lossCauseDropDown = By.xpath("//div[@class='ibox-content']/div[8]/div[2]/div[1]/div[3]/div/div/div/div/div/div/span/span");
+
+    private By optionOfLossCauseDD = By.xpath("//ul[@id='CauseId_listbox']/li[3]/table/tbody/tr/td[2]/span");
+
+    private By saveButton = By.xpath("//div[@class='col-md-12 text-center']/button");
 
 
 
@@ -812,6 +853,202 @@ public class PolicyPage {
 
     public String verifyDetailsOfPolicyLedgerTabOnPolicyInformationPage(){
         return driver.findElement(detailsOfPolicyLedgerTab).getText();
+
+    }
+
+    //Add claim for existing policy
+
+    public void clickAddClaimIcon() {
+        Log.info("*******Script To Create Claim For Existing policy ===LAST-0010-HHPL-00000001===start here*****");
+
+        driver.findElement(By.id("PolicyNumber")).sendKeys("LAST-0010-HHPL-00000001");
+        Log.info("Enter Policy Number ==LAST-0010-HHPL-00000001");
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        driver.findElement(By.id("SearchGrid")).click();
+        Log.info("Click On Search Button On Manage Policy Page");
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+        Actions actions = new Actions(driver);
+        actions.moveToElement(driver.findElement(cogIconOnPolicyManagePage)).perform();
+        Log.info("Script Has Clicked On Cog Icon To Select Add Account Maintenance Page Icon");
+        try {
+            Thread.sleep(1500);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        driver.findElement(addClaimOnCogIcon).click();
+        Log.info("Select Add claim icon from cog dropdown on manage policy page for selected policy to launch add claim page ");
+
+        String displayMessage = " ";
+        ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+        driver.switchTo().window(tabs2.get(1));
+        try {
+            Thread.sleep(6000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        System.out.println(driver.getCurrentUrl());
+        Log.info("Script Redirects To Add Claim Page is===>" + driver.getCurrentUrl());
+
+
+
+    }
+
+    public void enterClaimPolicyInfo() {
+
+
+        WebElement element1 = driver.findElement(By.xpath("//div[@class='ibox-content']/div[6]/div[3]/div/div/div[7]/div/div/div/span/span"));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element1);
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        WebElement cover = driver.findElement(By.xpath("//div[@class='ibox-content']/div[6]/div[3]/div/div/div[7]/div/div/div/span/span"));
+        JavascriptExecutor executor = (JavascriptExecutor) driver;
+        executor.executeScript("arguments[0].click();", cover);
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        WebElement optionCover = driver.findElement(By.xpath("//ul[@id='ClaimCoverDetailId_listbox']/li[2]"));
+        JavascriptExecutor executor1 = (JavascriptExecutor) driver;
+        Log.info("Select Cover Type option==" +optionCover.getText());
+        executor1.executeScript("arguments[0].click();", optionCover);
+
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        driver.findElement(treatmentDate).sendKeys("11/10/2023");
+        Log.info("Entered Treatment Date is== 11.10.2023" );
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        driver.findElement(firstClaimAdvised).sendKeys("11/10/2023");
+        Log.info("Entered first claim advised  Date is== 11.10.2023" );
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+
+        WebElement notifiedDD = driver.findElement(By.xpath("//div[@class='ibox-content']/div[6]/div[4]/div/div/div[3]/div/div/div[5]/div/div/div/span"));
+        JavascriptExecutor executor2 = (JavascriptExecutor) driver;
+        executor2.executeScript("arguments[0].click();", notifiedDD);
+
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        WebElement optionNotifiedDD = driver.findElement(By.xpath("//ul[@id='NotificationMethod_listbox']/li[4]"));
+        JavascriptExecutor executor3 = (JavascriptExecutor) driver;
+        Log.info("Selected claim notified method is==" +optionNotifiedDD.getText());
+        executor3.executeScript("arguments[0].click();", optionNotifiedDD);
+
+
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        WebElement paymentToDD = driver.findElement(By.xpath("//div[@class='ibox-content']/div[6]/div[4]/div/div/div[3]/div/div/div[8]/div/div/div/span"));
+        JavascriptExecutor executor4 = (JavascriptExecutor) driver;
+        executor4.executeScript("arguments[0].click();", paymentToDD);
+
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        WebElement optionPaymentToDD = driver.findElement(By.xpath("//ul[@id='PayBy_listbox']/li[2]"));
+        JavascriptExecutor executor5 = (JavascriptExecutor) driver;
+        Log.info("Selected Payment to option is==" +optionPaymentToDD.getText());
+        executor5.executeScript("arguments[0].click();", optionPaymentToDD);
+
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        WebElement conditionTypeDD = driver.findElement(By.xpath("//div[@class='ibox-content']/div[6]/div[4]/div/div/div[3]/div/div/div[14]/div/div/div/span"));
+        JavascriptExecutor executor6 = (JavascriptExecutor) driver;
+        executor6.executeScript("arguments[0].click();", conditionTypeDD);
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        WebElement optionConditionTypeDD = driver.findElement(By.xpath("//ul[@id='ConditionType_listbox']/li[3]"));
+        JavascriptExecutor executor7 = (JavascriptExecutor) driver;
+        Log.info("Selected condition Type is ==" +optionConditionTypeDD.getText());
+        executor7.executeScript("arguments[0].click();", optionConditionTypeDD);
+
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        ((JavascriptExecutor) driver).executeScript("document.getElementById('ClaimAmount').style.display='block';");
+
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        driver.findElement(claimAmount).sendKeys("1200");
+        Log.info("Entered Claim amount is==1200");
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        WebElement lossCauseDD = driver.findElement(By.xpath("//div[@class='ibox-content']/div[8]/div[2]/div[1]/div[3]/div/div/div/div/div/div/span/span/span[2]"));
+        JavascriptExecutor executor8 = (JavascriptExecutor) driver;
+        executor8.executeScript("arguments[0].click();", lossCauseDD);
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        WebElement optionLossCauseDD = driver.findElement(By.xpath("//ul[@id='CauseId_listbox']/li[3]/table/tbody/tr/td[2]/span"));
+        JavascriptExecutor executor9 = (JavascriptExecutor) driver;
+        Log.info("Selected loss cause is==" +optionLossCauseDD.getText());
+        executor9.executeScript("arguments[0].click();", optionLossCauseDD);
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+
+    }
+
+    public void clickOnSaveClaimButton() {
+        driver.findElement(saveButton).click();
+        Log.info("Cliked On Save Button");
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        Log.info("Generated Claim Number is==" +driver.findElement(By.xpath("//div[@class='ibox-content1 padding-right7']/div/div[2]/div[1]/dl/dd/h2")).getText());
+
+
 
     }
 
